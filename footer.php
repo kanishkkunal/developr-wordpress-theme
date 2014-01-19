@@ -11,12 +11,20 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'developr_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'developr' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'developr' ), 'Developr', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+        <a class="back-to-top" href="#">&uarr;</a>
+        <div class="container">
+            <div>
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+			        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		        </nav><!-- #site-navigation -->
+            </div>
+		    <div class="site-info">
+			    <?php do_action( 'developr_credits' ); ?>
+			    <?php printf( __( 'Proudly powered by %s', 'Developr' ), '<a href="http://wordpress.org/" rel="generator"  target="_blank">WordPress</a>' ); ?>
+			    <span class="sep"> | </span>
+			    <?php printf( __( 'Theme: %1$s by %2$s.', 'Developr' ), 'Developr', '<a href="http://kanishkkunal.in" rel="designer" target="_blank">Kanishk</a>' ); ?>
+		    </div><!-- .site-info -->
+        </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
