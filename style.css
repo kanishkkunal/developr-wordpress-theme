@@ -29,10 +29,48 @@ body {
 	background: #fff;
 }
 
+/* Color bars */
+#color-bars {
+    width: 100%;
+    padding: 0;
+}
+
+#color-bars li {
+float: left;
+display: block;
+width: 16.666%;
+height: 12px;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+#color-bars li#color-1 { background: #f12f25; }
+#color-bars li#color-2 { background: #ff9531; }
+#color-bars li#color-3 { background: #efd21f; }
+#color-bars li#color-4 { background: #aec534; }
+#color-bars li#color-5 { background: #24a5db; }
+#color-bars li#color-6 { background: #5830cb; }
+
 .container {
     width: 85%;
     max-width: 740px;
     margin: auto;
+}
+
+.navbar .container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-nav li {
+    text-transform: uppercase;
 }
 
 .header-image {
