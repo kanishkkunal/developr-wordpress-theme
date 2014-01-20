@@ -73,20 +73,6 @@ transition: all 0.3s ease;
     text-transform: uppercase;
 }
 
-.header-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    min-width: 100px;
-	max-width: 300px;
-	height: auto;
-    -webkit-border-radius: 50%;
-	-moz-border-radius:    50%;
-	border-radius:         50%;
-}
-
 .entry-meta {
     color: #9EABB3;
     margin-top: 10px;
@@ -414,6 +400,8 @@ text-decoration: none;
     clear: both;
     margin: 8rem 0 0 0;
 }
+
+
 
 /* =Infinite Scroll
 ----------------------------------------------- */

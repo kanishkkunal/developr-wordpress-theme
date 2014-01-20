@@ -81,7 +81,7 @@
 			if ( ! empty( $header_image ) ) :
 		    ?>
 			    <a class="site-logo"  href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				    <img src="<?php echo $header_image; ?>" alt="Gravatar" class="header-image" />
+				    <img src="<?php echo $header_image; ?>" alt="Gravatar" class="img-circle" width="120" height="120" />
 			    </a>
 		    <?php endif; ?>
 		    <div class="site-branding text-center">

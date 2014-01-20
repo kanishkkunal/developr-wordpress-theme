@@ -21,14 +21,14 @@ function developr_paging_nav() {
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'developr' ); ?></h1>
-		<div class="nav-links">
+		<div class="nav-links pager">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'developr' ) ); ?></div>
+			<div class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'developr' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'developr' ) ); ?></div>
+			<div class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'developr' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -54,10 +54,10 @@ function developr_post_nav() {
 	?>
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'developr' ); ?></h1>
-		<div class="nav-links">
+		<div class="nav-links pager">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'developr' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'developr' ) );
+				previous_post_link( '<div class="nav-previous previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'developr' ) );
+				next_post_link(     '<div class="nav-next next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'developr' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
