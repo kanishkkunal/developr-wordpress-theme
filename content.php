@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>	
+		<h2 class="entry-title"><?php if ( is_sticky() ) echo'<span class="thumb-icon"><i class="fa fa-star"></i> </span>'; ?><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>	
         <?php if ( 'post' == get_post_type() ) : ?>
 		    <div class="entry-meta">
 			   
@@ -25,6 +25,15 @@
 		 <?php endif; ?>	
 	</header><!-- .entry-header -->
 
+    
+	<?php if ( has_post_thumbnail() ): ?>
+        <div class="post-thumbnail">
+            <a href="<?php the_permalink(); ?>" rel="bookmark">
+			    <?php the_post_thumbnail('thumb-medium'); ?>
+            </a>
+	    </div><!--/.post-thumbnail-->
+	<?php endif; ?>
+		
 	
 	<div class="entry-summary">
         <?php the_excerpt(); ?>

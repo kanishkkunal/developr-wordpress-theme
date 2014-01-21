@@ -235,9 +235,8 @@ big {
 /* =Content
 ----------------------------------------------- */
 
-.sticky header {
-    border-left: 3px #EBF2F6 solid;
-    padding-left: 10px;
+.sticky .fa-star {
+   color: #eee;
 }
 .hentry {
 	margin: 0 0 1.5em;
@@ -262,6 +261,15 @@ big {
 .group:before, .group:after { content: ""; display: table; }
 .group:after { clear: both; }
 .group { zoom: 1; }
+
+.post-thumbnail { width: 100%; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease; }
+.post-thumbnail { position: relative; margin-bottom: 1em; }
+.post-thumbnail img { display: block; width: 100%; height: auto; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* =Asides
 ----------------------------------------------- */
