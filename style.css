@@ -26,7 +26,17 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 
 body {
+    padding-top: 60px;
 	background: #fff;
+}
+
+/* Link Styles */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    text-decoration: none;
+}
+
+h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus {
+    text-decoration: none;
 }
 
 /* Color bars */
@@ -46,12 +56,12 @@ height: 12px;
 transition: all 0.3s ease;
 }
 
-#color-bars li#color-1 { background: #f12f25; }
-#color-bars li#color-2 { background: #ff9531; }
-#color-bars li#color-3 { background: #efd21f; }
-#color-bars li#color-4 { background: #aec534; }
-#color-bars li#color-5 { background: #24a5db; }
-#color-bars li#color-6 { background: #5830cb; }
+#color-bars li#color-1 { background: #c0392b; }
+#color-bars li#color-2 { background: #d35400; }
+#color-bars li#color-3 { background: #f1c40f; }
+#color-bars li#color-4 { background: #27ae60; }
+#color-bars li#color-5 { background: #2980b9; }
+#color-bars li#color-6 { background: #8e44ad; }
 
 .container {
     width: 85%;
@@ -75,11 +85,10 @@ transition: all 0.3s ease;
 
 /* Header styling */
 .site-header {
-    background-color: #fafafa;
+    background-color: #ecf0f1;
     position: relative;
     padding-left: 0px;
     padding-right: 0px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
 
@@ -105,8 +114,8 @@ text-align: center;
 
 .social-flare a {
 display: inline-block;
-background: #ffffff;
-color: #bdc3c7;
+background: #7f8c8d;
+color: #ecf0f1;
 font-size: 18px;
 height: 40px;
 width: 40px;
@@ -114,10 +123,21 @@ line-height: 40px;
 -webkit-border-radius: 100%;
 border-radius: 100%;
 text-align: center;
-box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 }
 
-/* Entry styling */
+.social-flare a:hover {
+background: #95a5a6;
+color: #ffffff;
+}
+
+/* Article styling */
+.site-main article {
+     position: relative;
+     margin-top: 60px;
+     background-color: #fff;
+     
+}
+
 .entry-meta {
     color: #9EABB3;
     margin-top: 10px;
@@ -139,31 +159,6 @@ box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 }
 
 .entry-header {
-    margin-top: 40px;
-}
-
-.entry-summary {
-position: relative;
-margin-bottom: 6rem;
-padding-bottom: 2rem;
-border-bottom: #EBF2F6 1px solid;
-}
-
-.entry-summary:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
 }
 
 tt, var {

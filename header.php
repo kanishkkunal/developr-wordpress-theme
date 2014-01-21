@@ -23,7 +23,7 @@
     
     <?php do_action( 'before' ); ?>
     <div>
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <ul id="color-bars" class="group">
 			    <li id="color-1"></li>
 			    <li id="color-2"></li>

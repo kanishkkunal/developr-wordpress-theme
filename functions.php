@@ -76,6 +76,7 @@ add_action( 'widgets_init', 'developr_widgets_init' );
  * Enqueue scripts and styles.
  */
 function developr_scripts() {
+    wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700');
     wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.min.css' );
     wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
 	wp_enqueue_style( 'developr-style', get_stylesheet_uri() );
