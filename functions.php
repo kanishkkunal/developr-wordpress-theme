@@ -62,12 +62,30 @@ add_action( 'after_setup_theme', 'developr_setup' );
  */
 function developr_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'developr' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Footer-1', 'developr' ),
+		'id'            => 'footer-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+
+    register_sidebar( array(
+		'name'          => __( 'Footer-2', 'developr' ),
+		'id'            => 'footer-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+
+    register_sidebar( array(
+		'name'          => __( 'Footer-3', 'developr' ),
+		'id'            => 'footer-3',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 }
 add_action( 'widgets_init', 'developr_widgets_init' );
