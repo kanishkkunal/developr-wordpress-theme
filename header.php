@@ -92,11 +92,13 @@
 			        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
                 <?php endif; ?>
 		    </div>
-            <div class="btn-group">	
-					<a rel="nofollow" class="btn btn-lg social-links" title="Twitter" href="https://twitter.com/SuperDevRes42" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a rel="nofollow" class="btn btn-lg social-links" title="Facebook" href="https://www.facebook.com/superdevresources" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a rel="publisher" class="btn btn-lg social-links" title="Google Plus" href="https://www.google.com/+Superdevresources42" target="_blank"><i class="fa fa-google-plus"></i></a>
-                    <a rel="nofollow" class="btn btn-lg social-links" title="RSS Feed" href="http://feeds.feedburner.com/SuperDevResources" target="_blank"><i class="fa fa-rss"></i></a>				
+        </div>
+        <div class="social-flare-container">
+            <div class="social-flare">	
+				<a rel="nofollow" class="social-links" title="Twitter" href="https://twitter.com/SuperDevRes42" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a rel="nofollow" class="social-links" title="Facebook" href="https://www.facebook.com/superdevresources" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a rel="publisher" class="social-links" title="Google Plus" href="https://www.google.com/+Superdevresources42" target="_blank"><i class="fa fa-google-plus"></i></a>
+                <a rel="nofollow" class="social-links" title="RSS Feed" href="http://feeds.feedburner.com/SuperDevResources" target="_blank"><i class="fa fa-rss"></i></a>
             </div>
         </div>
 	</header><!-- #masthead -->
