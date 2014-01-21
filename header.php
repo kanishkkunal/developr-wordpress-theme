@@ -22,42 +22,32 @@
 <div id="page" class="hfeed site">
     
     <?php do_action( 'before' ); ?>
-    <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <ul id="color-bars" class="group">
-			    <li id="color-1"></li>
-			    <li id="color-2"></li>
-			    <li id="color-3"></li>
-			    <li id="color-4"></li>
-			    <li id="color-5"></li>
-			    <li id="color-6"></li>
-		    </ul>
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <?php
-                    wp_nav_menu( array(
-                        'menu'              => 'primary',
-                        'theme_location'    => 'primary',
-                        'depth'             => 7,
-                        'container'         => 'div',
-                        'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-                        'menu_class'        => 'nav navbar-nav',
-                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                        'walker'            => new wp_bootstrap_navwalker())
-                    );
-                ?>
-            </div>
-        </nav><!-- #site-navigation -->
+    <div id="topbar">
+        <?php if (has_nav_menu('primary')): ?>
+			<nav class="nav-container group" id="nav-topbar">
+                <ul id="color-bars">
+			        <li id="color-1"></li>
+			        <li id="color-2"></li>
+			        <li id="color-3"></li>
+			        <li id="color-4"></li>
+			        <li id="color-5"></li>
+			        <li id="color-6"></li>
+		        </ul>
+				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+				<div class="nav-text"><!-- put your mobile menu text here --></div>
+				<div class="nav-wrap"><?php wp_nav_menu(array('theme_location'=>'primary','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
+				
+				<div>	
+					<div class="toggle-search"><i class="fa fa-search"></i></div>
+					<div class="search-expand">
+						<div class="search-expand-inner">
+							<?php get_search_form(); ?>
+						</div>
+					</div>
+				</div><!--/.container-->
+				
+			</nav><!--/#nav-topbar-->
+		<?php endif; ?>
     </div>
 	<header id="masthead" class="jumbotron site-header text-center" role="banner">
         <div class="container">
