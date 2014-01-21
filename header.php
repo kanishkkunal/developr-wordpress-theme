@@ -22,7 +22,7 @@
 <div id="page" class="hfeed site">
     
     <?php do_action( 'before' ); ?>
-    <div id="topbar">
+    <div id="topbar" data-spy="affix" data-offset-top="280" class="affix-top">
         <?php if (has_nav_menu('primary')): ?>
 			<nav class="nav-container group" id="nav-topbar">
                 <ul id="color-bars">
