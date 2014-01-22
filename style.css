@@ -26,6 +26,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 
 body {
+    background-color: #f4f4f4;
     padding-top: 0px;
 }
 
@@ -65,10 +66,11 @@ transition: all 0.3s ease;
 #color-bars li#color-6 { background: #9b59b6; }
 
 .container {
-    width: 95%;
-    max-width: 740px;
+    width: 100%;
+    max-width: 780px;
     margin: auto;
-}
+    padding-left: 48px;
+    padding-right: 48px;}
 
 .navbar .container {
     width: 100%;
@@ -86,10 +88,11 @@ transition: all 0.3s ease;
 
 /* Header styling */
 .site-header {
-    background-color: #fafafa;
+    background-color: #f4f4f4;
     position: relative;
     padding-left: 0px;
     padding-right: 0px;
+    margin-bottom: 0;
 }
 
 
@@ -115,8 +118,8 @@ text-align: center;
 
 .social-flare a {
 display: inline-block;
-background: #f2f2f2;
-color: #aaa;
+background: #aaa;
+color: #ffffff;
 font-size: 18px;
 height: 40px;
 width: 40px;
@@ -127,11 +130,16 @@ text-align: center;
 }
 
 .social-flare a:hover {
-background: #aaa;
-color: #ffffff;
+background: #fafafa;
+color: #aaa;
 }
 
 /* Article styling */
+
+.site-content {
+    background: #fff;
+}
+
 .site-main article {
      position: relative;
      margin-top: 60px;
@@ -522,7 +530,7 @@ color: #444;
 
 .widget-area {
     clear: both;
-    margin: 8rem 0 0 0;
+    margin: 0;
 }
 
 /* Post navs */
@@ -673,6 +681,11 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 	-webkit-box-shadow: 1px 0 0 rgba(255,255,255,0.1);
 	box-shadow: 1px 0 0 rgba(255,255,255,0.1); }
 	.search-expand { left: 0; right: auto; top: 50px; width: 320px; }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
