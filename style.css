@@ -432,6 +432,18 @@ ol.comment-list {
    color: #aaa;
 }
 
+.comments-area {
+    background-color: #fafafa;
+    padding: 15px;
+}
+
+.comments-area code {
+    white-space: inherit;
+}
+
+.comments-area label {
+    display: block;
+}
 
 /* =Widgets
 ----------------------------------------------- */
