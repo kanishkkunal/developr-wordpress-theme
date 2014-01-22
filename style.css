@@ -340,30 +340,57 @@ list-style-type: none;
 padding: 0;
 }
 
-.comment {
-    border-top: #EBF2F6 1px solid;    
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 24px;
-}
-
 .comment-content {  
-    font-family: Georgia, serif;
 }
 
 .comments-title {
     font-weight: 300;
 }
 .comment-author {
-    font-size: 1.6rem;
-}
-
-.comment-author img.avatar {
+    font-size: 16px;
+    float: left;
     margin-right: 6px;
 }
 
+.comment-list article {
+    margin-top: 24px;
+}
+
+.comment-list li {
+padding-left: 60px;
+font-size: 14px;
+line-height: 22px;
+font-weight: 300;
+margin: 0;
+}
+
+.comment-list li li {
+padding-left: 48px;
+margin: 0;
+}
+
+.comment-list .avatar {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    margin-right: 6px;
+}
+
+.comment-list li li .avatar {
+width: 36px;
+height: 36px;
+left: -48px;
+top: 0;
+}
+
 .comment-metadata {
-    font-size: 1.4rem;    
+    font-size: 13px;    
     color: #a2a2a2;
+    float: left;
 }
 
 .comment-metadata a {
@@ -371,17 +398,16 @@ padding: 0;
     text-decoration: none;
 }
 
+.comment-list .comment-body p {
+margin-top: 8px;
+margin-bottom: 8px;
+color: #777;
+clear: both;
+}
+
 ol.comment-list {
     list-style: none;
-    margin: 1.5em 1.5em 0 0;
-}
-
-li.comment {
-    margin-bottom: 2em;
-}
-
-.comment-content {
-    margin-left: 1.5em;
+    margin: 0;
 }
 
 .comment-content a {
@@ -391,7 +417,11 @@ li.comment {
 }
 
 .comment-body .reply {
-    font-size: 1.6rem;
+    font-size: 13px;
+}
+
+.comment-body .reply a {
+   color: #aaa;
 }
 
 
@@ -493,6 +523,24 @@ color: #444;
 .widget-area {
     clear: both;
     margin: 8rem 0 0 0;
+}
+
+/* Post navs */
+.post-navigation {
+    background-color: #fafafa;
+    border-top: 1px #f4f4f4 solid;
+    border-bottom: 1px #f4f4f4 solid;
+    padding: 12px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.post-navigation .nav-previous {
+    padding: 12px;
+}
+
+.post-navigation .nav-next {
+    padding: 12px;
 }
 
 /*  common : nav

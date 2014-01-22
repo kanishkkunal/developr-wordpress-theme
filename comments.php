@@ -25,12 +25,12 @@ if ( post_password_required() ) {
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'developr' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
+		<h4 class="comments-title">
+            <strong>
+                <i class="fa fa-comments-o"></i> 
+                <?php comments_number( __( 'No Responses', 'developr' ), __( '1 Response', 'developr' ), __( '% Responses', 'developr' ) ); ?>
+            </strong>
+		</h4>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
@@ -48,7 +48,7 @@ if ( post_password_required() ) {
 				 * define developr_comment() and that will be used instead.
 				 * See developr_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'developr_comment' ) );
+				wp_list_comments( array( 'callback' => 'developr_comment', 'avatar_size' => 99 ) );
 			?>
 		</ol><!-- .comment-list -->
 
@@ -68,7 +68,5 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'developr' ); ?></p>
 	<?php endif; ?>
-
-	<?php comment_form(); ?>
-
+    <?php comment_form(); ?>
 </div><!-- #comments -->

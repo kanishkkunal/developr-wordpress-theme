@@ -54,10 +54,10 @@ function developr_post_nav() {
 	?>
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'developr' ); ?></h1>
-		<div class="nav-links pager">
+		<div class="nav-links row">
 			<?php
-				previous_post_link( '<div class="nav-previous previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'developr' ) );
-				next_post_link(     '<div class="nav-next next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'developr' ) );
+				previous_post_link( '<div class="nav-previous col-sm-6">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'developr' ) );
+				next_post_link(     '<div class="nav-next col-sm-6">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'developr' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -88,11 +88,12 @@ function developr_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'developr' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s ', 'developr' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+                        <i class="fa fa-clock-o"></i> 
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'developr' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
