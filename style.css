@@ -301,7 +301,6 @@ img {
 }
 .pager {
   font-size: 16px;
-  margin-bottom: 48px;
 }
 /* =Asides
 ----------------------------------------------- */
@@ -469,6 +468,7 @@ ol.comment-list {
 ----------------------------------------------- */
 #secondary {
   background: #2f2f2f;
+  color: #a2a2a2;
   background-image: url('images/patterns/ObliqueLine-10x10px.png');
   padding: 24px;
 }
@@ -566,6 +566,10 @@ a.back-to-top {
 }
 /*  common : nav
 /* ------------------------------------ */
+.paging-navigation {
+  border-bottom: #eee 2px solid;
+  padding-bottom: 48px;
+}
 #topbar {
   padding-top: 0;
   padding-bottom: 0;
@@ -711,7 +715,7 @@ a.back-to-top {
   /* level 1 */
   .nav > li {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: normal;
     text-transform: uppercase;
     border-right: 1px solid #999;
     display: inline-block;
@@ -799,7 +803,7 @@ a.back-to-top {
 }
 @media only screen and (max-width: 719px) {
   .nav {
-    font-weight: 600;
+    font-weight: normal;
   }
   .nav-container {
     text-transform: none;

@@ -14,6 +14,8 @@ if ( ! function_exists( 'developr_paging_nav' ) ) :
  * @return void
  */
 function developr_paging_nav() {
+    
+
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -21,6 +23,9 @@ function developr_paging_nav() {
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'developr' ); ?></h1>
+        <?php if ( function_exists('wp_pagenavi') ): ?>
+		    <?php wp_pagenavi(); ?>
+	    <?php else: ?>
 		<div class="nav-links pager">
 
 			<?php if ( get_next_posts_link() ) : ?>
@@ -32,6 +37,7 @@ function developr_paging_nav() {
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
+        <?php endif; ?>
 	</nav><!-- .navigation -->
 	<?php
 }

@@ -303,7 +303,6 @@ img {
 
 .pager {
     font-size: 16px;
-    margin-bottom: 2 * @padding;
 }
 
 /* =Asides
@@ -510,6 +509,7 @@ height: 120px;
 
 #secondary {
     background: lighten(@background-color, 5%);
+    color: lighten(@background-color, 50%);
     background-image: @bg-image;
     padding: @padding;
 }
@@ -625,6 +625,11 @@ color: #fff;
 /*  common : nav
 /* ------------------------------------ */
 
+.paging-navigation {
+    border-bottom: #eee 2px solid;
+    padding-bottom: 2 * @padding;
+}
+
 #topbar {
     padding-top: 0; padding-bottom: 0;
     position: relative;
@@ -697,7 +702,7 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 	.nav > li > a:after {content: "\f0d7"; float: none; margin-left: 6px; font-size: 14px; }
 	.nav li > a:only-child:after {content: ""; margin: 0; }
 	/* level 1 */
-	.nav > li { font-size: 14px; font-weight: 600; text-transform: uppercase; border-right: 1px solid #999; display: inline-block; position: relative; }
+	.nav > li { font-size: 14px; font-weight: normal; text-transform: uppercase; border-right: 1px solid #999; display: inline-block; position: relative; }
 	.nav > li > a { padding: 15px 14px; }
 	.nav > li > a:hover, 
 	.nav > li:hover > a { background: #777; }
@@ -737,7 +742,7 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 }
 
 @media only screen and (max-width: 719px) {
-	.nav { font-weight: 600; }
+	.nav { font-weight: normal; }
 	.nav-container { text-transform: none; }
 	.nav-toggle,
 	.nav-text { display: block; }
