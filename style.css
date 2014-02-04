@@ -48,10 +48,10 @@ h6 a:focus {
 }
 a,
 .link {
-  color: #27ae60;
+  color: #181818;
 }
 a:hover {
-  color: #1e8449;
+  color: #000000;
 }
 .container {
   width: 100%;
@@ -70,15 +70,16 @@ a:hover {
 }
 /* Header styling */
 .site-header {
-  background-color: #2cc36b;
-  color: #f2fcf6;
+  background-color: #252525;
+  background-image: url('images/patterns/ObliqueLine-10x10px.png');
+  color: #a4a4a4;
   position: relative;
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 0;
 }
 .site-title a {
-  color: #ffffff;
+  color: #f1f1f1;
 }
 .social-flare-container {
   bottom: -20px;
@@ -100,7 +101,7 @@ a:hover {
 }
 .social-flare a {
   display: inline-block;
-  background: #27ae60;
+  background: #181818;
   color: #ffffff;
   font-size: 18px;
   height: 40px;
@@ -111,7 +112,7 @@ a:hover {
   text-align: center;
 }
 .social-flare a:hover {
-  background: #36d278;
+  background: #323232;
 }
 /* Article styling */
 .site-content {
@@ -126,7 +127,7 @@ a:hover {
   margin-bottom: 40px;
 }
 .entry-meta {
-  color: #75e0a2;
+  color: #585858;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 14px;
@@ -136,11 +137,11 @@ a:hover {
 .entry-meta a:focus,
 .entry-meta a:active {
   text-decoration: none;
-  color: #75e0a2;
+  color: #585858;
 }
 .entry-meta a:hover {
   text-decoration: underline;
-  color: #4bd786;
+  color: #3e3e3e;
 }
 tt,
 var {
@@ -212,7 +213,7 @@ big {
 /* =Content
 ----------------------------------------------- */
 .sticky .fa-star {
-  color: #27ae60;
+  color: #181818;
 }
 .hentry {
   margin: 0 0 1.5em;
@@ -360,10 +361,10 @@ object {
 .comment-metadata {
   clear: both;
   font-size: 13px;
-  color: #60db94;
+  color: #4b4b4b;
 }
 .comment-metadata a {
-  color: #60db94;
+  color: #4b4b4b;
   text-decoration: none;
   margin-right: 10px;
 }
@@ -386,7 +387,7 @@ ol.comment-list {
   color: #aaa;
 }
 .comments-area {
-  background-color: #d4f5e2;
+  background-color: #929292;
   padding: 0px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -404,7 +405,7 @@ ol.comment-list {
 /* =Widgets
 ----------------------------------------------- */
 #secondary {
-  background: #2cc36b;
+  background: #252525;
   padding: 20px;
 }
 #secondary .container {
@@ -425,15 +426,15 @@ ol.comment-list {
 .widget ul li {
   margin-bottom: 12px;
   padding-bottom: 12px;
-  color: #ddf7e8;
+  color: #989898;
 }
 .widget ul li a {
-  color: #ddf7e8;
+  color: #989898;
 }
 .widget-title {
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: #145b32;
+  color: #000000;
 }
 .widget-title a {
   color: inherit;
@@ -449,12 +450,12 @@ ol.comment-list {
   padding: 4rem 0;
   font-size: 1.3rem;
   line-height: 1.7em;
-  color: #b3eecc;
+  color: #7e7e7e;
   text-align: center;
-  background: #27ae60;
+  background: #181818;
 }
 .site-footer a {
-  color: #b3eecc;
+  color: #7e7e7e;
   text-decoration: none;
 }
 a.back-to-top {
@@ -470,7 +471,7 @@ a.back-to-top {
   background: #fff;
   transition: box-shadow 0.5s;
   text-decoration: none;
-  color: #27ae60;
+  color: #181818;
 }
 .widget-area {
   clear: both;
@@ -478,11 +479,11 @@ a.back-to-top {
 }
 /* Post navs */
 .post-navigation {
-  border-top: #60db94 1px solid;
-  border-bottom: #60db94 1px solid;
+  border-top: #4b4b4b 1px solid;
+  border-bottom: #4b4b4b 1px solid;
 }
 .post-navigation a {
-  color: #2cc36b;
+  color: #252525;
   font-size: 18px;
 }
 .post-navigation .nav-links {
@@ -505,13 +506,13 @@ a.back-to-top {
   position: relative;
 }
 .nav-container {
-  background-color: #27ae60;
+  background-color: #181818;
   z-index: 99;
   position: relative;
 }
 .nav-toggle {
   display: none;
-  background: #27ae60;
+  background: #181818;
   cursor: pointer;
   float: right;
   height: 50px;
@@ -533,7 +534,7 @@ a.back-to-top {
 .nav ul {
   list-style-type: none;
   padding-left: 0;
-  background: #27ae60;
+  background: #181818;
 }
 .nav li > a:hover {
   text-decoration: none;
@@ -581,7 +582,7 @@ a.back-to-top {
 }
 .search-expand {
   display: none;
-  background: #27ae60;
+  background: #181818;
   position: absolute;
   top: 100%;
   right: 0;
