@@ -363,7 +363,7 @@ padding: 0;
 }
 
 .comments-title {
-    font-weight: 300;
+    text-transform: uppercase;
 }
 .comment-author {
     font-size: 16px;
@@ -410,7 +410,7 @@ left: -48px;
 top: 0;
 }
 
-.comment-metadata {
+.comment-metadata, .comment-notes {
     clear: both;
     font-size: 12px;    
     color: lighten(@background-color, 60%);
@@ -453,12 +453,35 @@ ol.comment-list {
     padding-bottom: 2 * @padding;
 }
 
-.comments-area code {
-    white-space: inherit;
+.comments-area .form-allowed-tags {
+    display: none;
 }
 
 .comments-area label {
     display: block;
+}
+
+#reply-title {
+    text-transform: uppercase;
+}
+
+#commentform {
+background: lighten(@background-color, 85%);
+padding: @padding;
+margin-bottom: @padding;
+}
+
+#commentform input[type="text"], #commentform input[type="email"], #commentform textarea {
+border: 2px solid #ddd;
+color: #777;
+display: block;
+width: 100%;
+outline: none;
+padding: 7px 8px;
+}
+
+#commentform textarea {
+height: 120px;
 }
 
 /* =Widgets
