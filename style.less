@@ -25,7 +25,7 @@ and Blueprint http://www.blueprintcss.org/
 /* =Global
 ----------------------------------------------- */
 
-@background-color: #444;
+@background-color: #c0392b;
 @content-background: #fff;
 @padding: 20px;
 @content-width: 700px;
@@ -483,7 +483,7 @@ ol.comment-list {
     line-height: 1.7em;
     color: lighten(@background-color, 40%);
     text-align: center;
-    background: #444;
+    background: @background-color;
 }
 
 .site-footer a {
@@ -504,7 +504,7 @@ border-radius: 50px;
 background: #fff;
 transition: box-shadow 0.5s;
 text-decoration: none;
-color: #444;
+color: @background-color;
 }
 
 .widget-area {
@@ -514,25 +514,27 @@ color: #444;
 
 /* Post navs */
 .post-navigation {
-    background-color: #fafafa;
-    border-top: 1px #f4f4f4 solid;
-    border-bottom: 1px #f4f4f4 solid;
-    padding: 24px;
-    margin-top: 32px;
+    border-top: lighten(@background-color, 20%) 1px solid;
+    border-bottom: lighten(@background-color, 20%) 1px solid;
+}
+
+.post-navigation a {
+    color: lighten(@background-color, 5%);
+    font-size: 18px;
 }
 
 .post-navigation .nav-links {
-    max-width: 700px;
+    max-width: 1.2 * @content-width;
     margin: auto;
 }
 
 .post-navigation .nav-previous {
-    padding: 12px;
+    padding: @padding;
     text-align: left;
 }
 
 .post-navigation .nav-next {
-    padding: 12px;
+    padding: @padding;
     text-align: right;
 }
 
@@ -544,36 +546,22 @@ color: #444;
     position: relative;
 }
 
-.nav-container { background: #888; font-weight: 400; z-index: 99; position: relative; }
-.nav-toggle { display: none; background: #777; cursor: pointer; float: right; height: 50px; width: 60px; color: #fff; text-align: center; }
+.nav-container { background-color: @background-color; z-index: 99; position: relative; }
+.nav-toggle { display: none; background: @background-color; cursor: pointer; float: right; height: 50px; width: 60px; color: #fff; text-align: center; }
 .nav-toggle i { font-size: 29px; padding: 10px 0; }
 .nav-text { display: none; float: right; font-size: 16px; line-height: 24px; padding: 13px 20px; }
 .nav ul {
     list-style-type: none;
     padding-left: 0;
+    background: @background-color;
 }
 .nav li > a:hover { text-decoration: none; }
 .nav li > a:after,
 .nav > li > a:after { font-family: FontAwesome; display: inline-block; }
 
-/*  header : search
-/* ------------------------------------ */
-.toggle-search { color: #fff; font-size: 18px; line-height: 24px; cursor: pointer; padding: 13px 20px; display: block; position: absolute; right: 0; top: 10px;
--webkit-box-shadow: -1px 0 0 rgba(255,255,255,0.1);
-box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
-.toggle-search:hover,
-.toggle-search.active { background: rgba(0,0,0,0.15); color: #fff; }
-.search-expand { display: none; background: #444; position: absolute; top: 100%; right: 0; width: 340px;
--webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
-box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
-.search-expand-inner { background: rgba(0,0,0,0.15); padding: 15px; }
-.search-expand .themeform input { width: 100%; border: 2px solid #e2e2e2; border-radius: 0; }
-.search-expand .themeform input:focus {  }
-
 /*  header : nav topbar
 /* ------------------------------------ */
 #nav-topbar.nav-container { 
-    background: #444;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.15);
     box-shadow: 0 0 5px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.15); 
 }
@@ -584,6 +572,22 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
     box-shadow: inset 1px 0 0 rgba(255,255,255,0.06);
 }
 #nav-topbar .nav-text { color: #fff; color: rgba(255,255,255,0.7); }
+
+/*  header : search
+/* ------------------------------------ */
+.toggle-search { color: #fff; font-size: 18px; line-height: 24px; cursor: pointer; padding: 13px 20px; display: block; position: absolute; right: 0; top: 0px;
+-webkit-box-shadow: -1px 0 0 rgba(255,255,255,0.1);
+box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
+.toggle-search:hover,
+.toggle-search.active { background: rgba(0,0,0,0.15); color: #fff; }
+.search-expand { display: none; background: @background-color; position: absolute; top: 100%; right: 0; width: 340px;
+-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
+.search-expand-inner { background: rgba(0,0,0,0.15); padding: 15px; }
+.search-expand .themeform input { width: 100%; border: 2px solid #e2e2e2; border-radius: 0; }
+.search-expand .themeform input:focus {  }
+
+
 
 /* =Infinite Scroll
 ----------------------------------------------- */
@@ -597,6 +601,41 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+@media only screen and (min-width: 1025px) {
+	/* fixed nav */
+    body { padding-top: 48px; }
+	#nav-topbar.nav-container { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 999; }
+	.admin-bar #nav-topbar.nav-container { top: 32px; }
+
+    .affix .search-expand {
+        background: #fff;
+    }
+    .affix .toggle-search {
+        color: #999;
+        border-left: 1px solid #eee;
+        padding: 6px 20px;
+    }
+
+    .affix #nav-topbar.nav-container { 
+        background: #fff;
+    }
+
+    .affix #nav-topbar .nav ul {
+    background: #fff;
+    top: 32px;
+    }
+
+    .affix #nav-topbar .nav ul ul { top: -10px; }
+
+    .affix #nav-topbar .nav li a { color: #999; padding: 8px 14px;}
+	.affix #nav-topbar .nav li > a:hover, 
+	.affix #nav-topbar .nav li:hover > a, 
+	.affix #nav-topbar .nav li.current_page_item > a, 
+	.affix #nav-topbar .nav li.current-menu-item > a,
+	.affix #nav-topbar .nav li.current-menu-ancestor > a,
+	.affix #nav-topbar .nav li.current-post-parent > a { color: #2e2f34; }
 }
 
 @media only screen and (min-width: 720px) {
@@ -621,7 +660,7 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 	.nav li.current-post-parent > a { color: #fff; }
 	/* level 2 & 3 */
 	.nav li:hover > ul { display: block; }
-	.nav ul { display: none; background: #777; position: absolute; left: 0; top: 50px; width: 180px; padding: 10px 0; z-index: 2; -webkit-transform: translateZ(0);
+	.nav ul { display: none; position: absolute; left: 0; top: 50px; width: 180px; padding: 10px 0; z-index: 2; -webkit-transform: translateZ(0);
 	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.15);
 	box-shadow: 0 2px 2px rgba(0,0,0,0.15); }
 	.nav ul li { font-size: 13px; position: relative; display: block; padding: 0; }
@@ -644,7 +683,6 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 	#nav-topbar .nav li.current-menu-ancestor > a,
 	#nav-topbar .nav li.current-post-parent > a { color: #fff; }
 	/* level 2 & 3 */
-	#nav-topbar .nav ul { background: #444; }
 	#nav-topbar .nav ul li { box-shadow: 0 1px 0 rgba(255,255,255,0.06); -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
 	#nav-topbar .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
 }
@@ -688,7 +726,7 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 	#nav-topbar .nav li.current-menu-item > a,
 	#nav-topbar .nav li.current-post-parent > a { background: rgba(0,0,0,0.15); color: #fff; }
 
-    .toggle-search { right: auto; left: 0; top: 12px;
+    .toggle-search { right: auto; left: 0; top: 0;
 	-webkit-box-shadow: 1px 0 0 rgba(255,255,255,0.1);
 	box-shadow: 1px 0 0 rgba(255,255,255,0.1); }
 	.search-expand { left: 0; right: auto; top: 50px; width: 320px; }
@@ -697,41 +735,4 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
         padding-left: 15px;
         padding-right: 15px;
     }
-}
-
-@media only screen and (min-width: 1025px) {
-	/* fixed nav */
-    body { padding-top: 60px; }
-	#nav-topbar.nav-container { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 999; }
-	.admin-bar #nav-topbar.nav-container { top: 32px; }
-
-    .affix #color-bars li { height: 6px;}
-    .affix .search-expand {
-        background: #fff;
-    }
-    .affix .toggle-search {
-        color: #999;
-        border-left: 1px solid #eee;
-        top: 6px;
-        padding: 6px 20px;
-    }
-
-    .affix #nav-topbar.nav-container { 
-        background: #fff;
-    }
-
-    .affix #nav-topbar .nav ul {
-    background: #fff;
-    top: 32px;
-    }
-
-    .affix #nav-topbar .nav ul ul { top: -10px; }
-
-    .affix #nav-topbar .nav li a { color: #999; padding: 8px 14px;}
-	.affix #nav-topbar .nav li > a:hover, 
-	.affix #nav-topbar .nav li:hover > a, 
-	.affix #nav-topbar .nav li.current_page_item > a, 
-	.affix #nav-topbar .nav li.current-menu-item > a,
-	.affix #nav-topbar .nav li.current-menu-ancestor > a,
-	.affix #nav-topbar .nav li.current-post-parent > a { color: #2e2f34; }
 }
