@@ -46,6 +46,13 @@ h5 a:focus,
 h6 a:focus {
   text-decoration: none;
 }
+a,
+.link {
+  color: #27ae60;
+}
+a:hover {
+  color: #1e8449;
+}
 .container {
   width: 100%;
   padding: 0;
@@ -57,10 +64,14 @@ h6 a:focus {
   padding: 0;
   margin: 0;
 }
+.content-area * {
+  max-width: 700px;
+  margin: auto;
+}
 /* Header styling */
 .site-header {
-  background-color: #d14233;
-  color: #ffffff;
+  background-color: #2cc36b;
+  color: #f2fcf6;
   position: relative;
   padding-left: 0px;
   padding-right: 0px;
@@ -89,7 +100,7 @@ h6 a:focus {
 }
 .social-flare a {
   display: inline-block;
-  background: #db695d;
+  background: #27ae60;
   color: #ffffff;
   font-size: 18px;
   height: 40px;
@@ -100,7 +111,7 @@ h6 a:focus {
   text-align: center;
 }
 .social-flare a:hover {
-  background: #e48f86;
+  background: #36d278;
 }
 /* Article styling */
 .site-content {
@@ -115,7 +126,7 @@ h6 a:focus {
   margin-bottom: 40px;
 }
 .entry-meta {
-  color: #e48f86;
+  color: #75e0a2;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 14px;
@@ -125,11 +136,11 @@ h6 a:focus {
 .entry-meta a:focus,
 .entry-meta a:active {
   text-decoration: none;
-  color: #e48f86;
+  color: #75e0a2;
 }
 .entry-meta a:hover {
   text-decoration: underline;
-  color: #db695d;
+  color: #4bd786;
 }
 tt,
 var {
@@ -201,7 +212,7 @@ big {
 /* =Content
 ----------------------------------------------- */
 .sticky .fa-star {
-  color: #c0392b;
+  color: #27ae60;
 }
 .hentry {
   margin: 0 0 1.5em;
@@ -349,10 +360,10 @@ object {
 .comment-metadata {
   clear: both;
   font-size: 13px;
-  color: #df7c72;
+  color: #60db94;
 }
 .comment-metadata a {
-  color: #df7c72;
+  color: #60db94;
   text-decoration: none;
   margin-right: 10px;
 }
@@ -375,7 +386,7 @@ ol.comment-list {
   color: #aaa;
 }
 .comments-area {
-  background-color: #f9e8e6;
+  background-color: #d4f5e2;
   padding: 0px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -393,7 +404,7 @@ ol.comment-list {
 /* =Widgets
 ----------------------------------------------- */
 #secondary {
-  background: #d14233;
+  background: #2cc36b;
   padding: 20px;
 }
 #secondary .container {
@@ -414,14 +425,15 @@ ol.comment-list {
 .widget ul li {
   margin-bottom: 12px;
   padding-bottom: 12px;
-  color: #fbf0ef;
+  color: #ddf7e8;
 }
 .widget ul li a {
-  color: #fbf0ef;
+  color: #ddf7e8;
 }
 .widget-title {
   text-transform: uppercase;
-  color: #7f8c8d;
+  margin-bottom: 20px;
+  color: #145b32;
 }
 .widget-title a {
   color: inherit;
@@ -435,15 +447,14 @@ ol.comment-list {
   position: relative;
   margin: 0;
   padding: 4rem 0;
-  border-top: #df7c72 1px solid;
   font-size: 1.3rem;
   line-height: 1.7em;
-  color: #f2c9c5;
+  color: #b3eecc;
   text-align: center;
-  background: #c0392b;
+  background: #27ae60;
 }
 .site-footer a {
-  color: #f2c9c5;
+  color: #b3eecc;
   text-decoration: none;
 }
 a.back-to-top {
@@ -459,7 +470,7 @@ a.back-to-top {
   background: #fff;
   transition: box-shadow 0.5s;
   text-decoration: none;
-  color: #c0392b;
+  color: #27ae60;
 }
 .widget-area {
   clear: both;
@@ -467,11 +478,11 @@ a.back-to-top {
 }
 /* Post navs */
 .post-navigation {
-  border-top: #df7c72 1px solid;
-  border-bottom: #df7c72 1px solid;
+  border-top: #60db94 1px solid;
+  border-bottom: #60db94 1px solid;
 }
 .post-navigation a {
-  color: #d14233;
+  color: #2cc36b;
   font-size: 18px;
 }
 .post-navigation .nav-links {
@@ -494,13 +505,13 @@ a.back-to-top {
   position: relative;
 }
 .nav-container {
-  background-color: #c0392b;
+  background-color: #27ae60;
   z-index: 99;
   position: relative;
 }
 .nav-toggle {
   display: none;
-  background: #c0392b;
+  background: #27ae60;
   cursor: pointer;
   float: right;
   height: 50px;
@@ -522,7 +533,7 @@ a.back-to-top {
 .nav ul {
   list-style-type: none;
   padding-left: 0;
-  background: #c0392b;
+  background: #27ae60;
 }
 .nav li > a:hover {
   text-decoration: none;
@@ -570,7 +581,7 @@ a.back-to-top {
 }
 .search-expand {
   display: none;
-  background: #c0392b;
+  background: #27ae60;
   position: absolute;
   top: 100%;
   right: 0;

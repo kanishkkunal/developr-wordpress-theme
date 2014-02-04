@@ -25,7 +25,7 @@ and Blueprint http://www.blueprintcss.org/
 /* =Global
 ----------------------------------------------- */
 
-@background-color: #c0392b;
+@background-color: #27ae60;
 @content-background: #fff;
 @padding: 20px;
 @content-width: 700px;
@@ -47,6 +47,15 @@ h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus {
     text-decoration: none;
 }
 
+a,
+.link {
+  color: @background-color;
+}
+a:hover {
+  color: darken(@background-color, 10%);
+}
+
+
 .container {
     .full-width;
 }
@@ -54,6 +63,11 @@ h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus {
 .content-area {
     background: @content-background;
     .full-width
+}
+
+.content-area * {
+    max-width: @content-width;
+    margin: auto;
 }
 
 /* Header styling */
@@ -92,7 +106,7 @@ text-align: center;
 
 .social-flare a {
 display: inline-block;
-background: lighten(@background-color, 15%);
+background: @background-color;
 color: lighten(@background-color, 95%);
 font-size: 18px;
 height: 40px;
@@ -104,7 +118,7 @@ text-align: center;
 }
 
 .social-flare a:hover {
-background: lighten(@background-color, 25%);
+background: lighten(@background-color, 10%);
 }
 
 /* Article styling */
@@ -461,7 +475,8 @@ ol.comment-list {
 
 .widget-title {
     text-transform: uppercase;
-    color: #7f8c8d;
+    margin-bottom: @padding;
+    color: darken(@background-color, 20%);
 }
 
 .widget-title a {
@@ -478,7 +493,6 @@ ol.comment-list {
     position: relative;
     margin: 0;
     padding: 4rem 0;
-    border-top: lighten(@background-color, 20%) 1px solid;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: lighten(@background-color, 40%);

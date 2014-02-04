@@ -108,6 +108,22 @@ function developr_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'developr_scripts' );
 
+if ( ! function_exists( 'developr_excerpt_more' ) ) :
+/**
+ * Changes the default excerpt trailing content
+ *
+ * Replaces the default [...] trailing text from excerpts
+ * to a more pleasant ...
+ *
+ * @since fastr 1.0
+ */
+function developr_excerpt_more($more) {
+	return ' &#8230;';
+}
+endif;
+
+add_filter( 'excerpt_more', 'developr_excerpt_more' );
+
 /**
  * Implement the Custom Header feature.
  */
