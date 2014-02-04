@@ -69,7 +69,8 @@ a:hover {
 
 .content-area * {
     max-width: @content-width;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Header styling */
@@ -430,7 +431,8 @@ ol.comment-list {
 
 .comments-area * {
     max-width: @content-width;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .comments-area code {
@@ -620,41 +622,6 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
-}
-
-@media only screen and (min-width: 1025px) {
-	/* fixed nav */
-    body { padding-top: 48px; }
-	#nav-topbar.nav-container { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 999; }
-	.admin-bar #nav-topbar.nav-container { top: 32px; }
-
-    .affix .search-expand {
-        background: #fff;
-    }
-    .affix .toggle-search {
-        color: #999;
-        border-left: 1px solid #eee;
-        padding: 6px 20px;
-    }
-
-    .affix #nav-topbar.nav-container { 
-        background: #fff;
-    }
-
-    .affix #nav-topbar .nav ul {
-    background: #fff;
-    top: 32px;
-    }
-
-    .affix #nav-topbar .nav ul ul { top: -10px; }
-
-    .affix #nav-topbar .nav li a { color: #999; padding: 8px 14px;}
-	.affix #nav-topbar .nav li > a:hover, 
-	.affix #nav-topbar .nav li:hover > a, 
-	.affix #nav-topbar .nav li.current_page_item > a, 
-	.affix #nav-topbar .nav li.current-menu-item > a,
-	.affix #nav-topbar .nav li.current-menu-ancestor > a,
-	.affix #nav-topbar .nav li.current-post-parent > a { color: #2e2f34; }
 }
 
 @media only screen and (min-width: 720px) {
