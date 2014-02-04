@@ -27,7 +27,7 @@ and Blueprint http://www.blueprintcss.org/
 
 @background-color: #181818;
 @content-background: #fff;
-@padding: 20px;
+@padding: 24px;
 @content-width: 700px;
 @bg-image: url('images/patterns/ObliqueLine-10x10px.png');
 
@@ -40,6 +40,7 @@ and Blueprint http://www.blueprintcss.org/
 }
 
 /* Bootstrap Style overrides */
+
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration: none;
 }
@@ -135,6 +136,8 @@ background: lighten(@background-color, 10%);
      margin: auto;     
      margin-top: 2 * @padding;
      margin-bottom:  2 * @padding;
+     padding-bottom:  2 * @padding;
+     border-bottom: 2px solid #eee;
 }
 
 .entry-meta {

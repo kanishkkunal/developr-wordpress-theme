@@ -117,19 +117,21 @@ a:hover {
 /* Article styling */
 .site-content {
   background: #ffffff;
-  padding-top: 20px;
+  padding-top: 24px;
 }
 .site-main article {
   position: relative;
   max-width: 700px;
   margin: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 2px solid #eee;
 }
 .entry-meta {
   color: #585858;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 14px;
 }
 .entry-meta a,
@@ -366,7 +368,7 @@ object {
 .comment-metadata a {
   color: #4b4b4b;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 .comment-list .comment-body p {
   margin-top: 8px;
@@ -389,8 +391,8 @@ ol.comment-list {
 .comments-area {
   background-color: #929292;
   padding: 0px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .comments-area * {
   max-width: 700px;
@@ -406,7 +408,7 @@ ol.comment-list {
 ----------------------------------------------- */
 #secondary {
   background: #252525;
-  padding: 20px;
+  padding: 24px;
 }
 #secondary .container {
   max-width: 979.9999999999999px;
@@ -433,7 +435,7 @@ ol.comment-list {
 }
 .widget-title {
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: #000000;
 }
 .widget-title a {
@@ -491,11 +493,11 @@ a.back-to-top {
   margin: auto;
 }
 .post-navigation .nav-previous {
-  padding: 20px;
+  padding: 24px;
   text-align: left;
 }
 .post-navigation .nav-next {
-  padding: 20px;
+  padding: 24px;
   text-align: right;
 }
 /*  common : nav
