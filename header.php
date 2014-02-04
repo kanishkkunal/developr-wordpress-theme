@@ -24,15 +24,7 @@
     <?php do_action( 'before' ); ?>
     <div id="topbar" data-spy="affix" data-offset-top="280" class="affix-top">
         <?php if (has_nav_menu('primary')): ?>
-			<nav class="nav-container group" id="nav-topbar">
-                <ul id="color-bars">
-			        <li id="color-1"></li>
-			        <li id="color-2"></li>
-			        <li id="color-3"></li>
-			        <li id="color-4"></li>
-			        <li id="color-5"></li>
-			        <li id="color-6"></li>
-		        </ul>
+			<nav class="nav-container group" id="nav-topbar">                
 				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
 				<div class="nav-text"><!-- put your mobile menu text here --></div>
 				<div class="nav-wrap"><?php wp_nav_menu(array('theme_location'=>'primary','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
