@@ -39,6 +39,19 @@ and Blueprint http://www.blueprintcss.org/
     margin: 0;
 }
 
+.maxed-width {
+    max-width: @content-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maxed-width2 {
+    max-width: 1.4 * @content-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /* Bootstrap Style overrides */
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
@@ -59,7 +72,7 @@ a:hover {
 
 
 .container {
-    .full-width;
+    .maxed-width;
 }
 
 .content-area {
@@ -67,11 +80,6 @@ a:hover {
     .full-width
 }
 
-.content-area * {
-    max-width: @content-width;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* Header styling */
 .site-header {
@@ -133,9 +141,11 @@ background: lighten(@background-color, 10%);
 
 .site-main article {
      position: relative;
-     max-width: @content-width;
-     margin: auto;     
      margin-top: 2 * @padding;
+}
+
+.site-main article.post, .site-main article.page {
+    
      margin-bottom:  2 * @padding;
      padding-bottom:  2 * @padding;
      border-bottom: 2px solid #eee;
@@ -176,6 +186,16 @@ ins {
 }
 big {
 	font-size: 125%;
+}
+
+.left,.alignleft { float: left; }
+.right,.alignright { float: right; }
+.aligncenter { margin-left: auto; margin-right: auto; }
+
+.entry-content img.aligncenter {
+margin: 18px auto;
+clear: both;
+display: block;
 }
 
 /* Text meant only for screen readers */
@@ -350,6 +370,11 @@ padding: 0;
     float: left;
 }
 
+.comment-author cite {
+    font-style: normal;
+    font-weight: 400;
+}
+
 .comment-list article {
     margin-top: 24px;
 }
@@ -387,20 +412,20 @@ top: 0;
 
 .comment-metadata {
     clear: both;
-    font-size: 13px;    
-    color: lighten(@background-color, 20%);
+    font-size: 12px;    
+    color: lighten(@background-color, 60%);
 }
 
 .comment-metadata a {
-    color: lighten(@background-color, 20%);
+    color: lighten(@background-color, 60%);
     text-decoration: none;
     margin-right: @padding / 2;
 }
 
 .comment-list .comment-body p {
-margin-top: 8px;
-margin-bottom: 8px;
-color: #777;
+margin-top: @padding / 2;
+margin-bottom: @padding / 2;
+color: lighten(@background-color, 10%);
 clear: both;
 }
 
@@ -423,16 +448,9 @@ ol.comment-list {
 }
 
 .comments-area {
-    background-color: lighten(@background-color, 48%);
     padding: 0px;
     padding-top:  2 * @padding;
     padding-bottom: 2 * @padding;
-}
-
-.comments-area * {
-    max-width: @content-width;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .comments-area code {
@@ -452,8 +470,7 @@ ol.comment-list {
 }
 
 #secondary .container {
-    max-width: 1.4 * @content-width;
-    margin: auto;
+    .maxed-width2;
 }
 
 .widget {
@@ -535,8 +552,8 @@ color: @background-color;
 
 /* Post navs */
 .post-navigation {
-    border-top: lighten(@background-color, 20%) 1px solid;
-    border-bottom: lighten(@background-color, 20%) 1px solid;
+    border-bottom: #eee 2px solid;
+    padding-bottom: 2 * @padding;
 }
 
 .post-navigation a {
@@ -545,7 +562,6 @@ color: @background-color;
 }
 
 .post-navigation .nav-links {
-    max-width: 1.2 * @content-width;
     margin: auto;
 }
 

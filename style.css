@@ -29,6 +29,16 @@ and Blueprint http://www.blueprintcss.org/
   padding: 0;
   margin: 0;
 }
+.maxed-width {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.maxed-width2 {
+  max-width: 979.9999999999999px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Bootstrap Style overrides */
 h1 a:hover,
 h2 a:hover,
@@ -54,20 +64,15 @@ a:hover {
   color: #000000;
 }
 .container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .content-area {
   background: #ffffff;
   width: 100%;
   padding: 0;
   margin: 0;
-}
-.content-area * {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 /* Header styling */
 .site-header {
@@ -122,9 +127,10 @@ a:hover {
 }
 .site-main article {
   position: relative;
-  max-width: 700px;
-  margin: auto;
   margin-top: 48px;
+}
+.site-main article.post,
+.site-main article.page {
   margin-bottom: 48px;
   padding-bottom: 48px;
   border-bottom: 2px solid #eee;
@@ -161,6 +167,23 @@ ins {
 }
 big {
   font-size: 125%;
+}
+.left,
+.alignleft {
+  float: left;
+}
+.right,
+.alignright {
+  float: right;
+}
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+.entry-content img.aligncenter {
+  margin: 18px auto;
+  clear: both;
+  display: block;
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -331,6 +354,10 @@ object {
   font-size: 16px;
   float: left;
 }
+.comment-author cite {
+  font-style: normal;
+  font-weight: 400;
+}
 .comment-list article {
   margin-top: 24px;
 }
@@ -363,18 +390,18 @@ object {
 }
 .comment-metadata {
   clear: both;
-  font-size: 13px;
-  color: #4b4b4b;
+  font-size: 12px;
+  color: #b1b1b1;
 }
 .comment-metadata a {
-  color: #4b4b4b;
+  color: #b1b1b1;
   text-decoration: none;
   margin-right: 12px;
 }
 .comment-list .comment-body p {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  color: #777;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: #323232;
   clear: both;
 }
 ol.comment-list {
@@ -390,15 +417,9 @@ ol.comment-list {
   color: #aaa;
 }
 .comments-area {
-  background-color: #929292;
   padding: 0px;
   padding-top: 48px;
   padding-bottom: 48px;
-}
-.comments-area * {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .comments-area code {
   white-space: inherit;
@@ -414,7 +435,8 @@ ol.comment-list {
 }
 #secondary .container {
   max-width: 979.9999999999999px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .widget {
   margin: 0 0 1.5em;
@@ -483,15 +505,14 @@ a.back-to-top {
 }
 /* Post navs */
 .post-navigation {
-  border-top: #4b4b4b 1px solid;
-  border-bottom: #4b4b4b 1px solid;
+  border-bottom: #eee 2px solid;
+  padding-bottom: 48px;
 }
 .post-navigation a {
   color: #252525;
   font-size: 18px;
 }
 .post-navigation .nav-links {
-  max-width: 840px;
   margin: auto;
 }
 .post-navigation .nav-previous {
