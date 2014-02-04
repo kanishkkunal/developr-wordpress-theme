@@ -37,7 +37,7 @@
 	<div class="entry-summary">
         <?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-    <div class="more-tag text-center">
-        <a class="" href="<?php the_permalink(); ?>" ><?php echo __( 'Read More', 'developr' ) ?> <i class="fa fa-arrow-circle-o-right"></i></a>
+    <div class="more-tag">
+        <a class="" href="<?php the_permalink(); ?>" ><?php echo __( 'Read More', 'developr' ) ?> &rarr;</a>
     </div>
 </article><!-- #post-## -->

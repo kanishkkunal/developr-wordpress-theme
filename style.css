@@ -58,10 +58,10 @@ h6 a:focus {
 }
 a,
 .link {
-  color: #181818;
+  color: #e74c3c;
 }
 a:hover {
-  color: #000000;
+  color: #d62c1a;
 }
 .container {
   max-width: 700px;
@@ -76,16 +76,16 @@ a:hover {
 }
 /* Header styling */
 .site-header {
-  background-color: #252525;
+  background-color: #2f2f2f;
   background-image: url('images/patterns/ObliqueLine-10x10px.png');
-  color: #a4a4a4;
+  color: #aeaeae;
   position: relative;
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 0;
 }
 .site-title a {
-  color: #f1f1f1;
+  color: #fbfbfb;
 }
 .social-flare-container {
   bottom: -20px;
@@ -107,7 +107,7 @@ a:hover {
 }
 .social-flare a {
   display: inline-block;
-  background: #181818;
+  background: #222222;
   color: #ffffff;
   font-size: 18px;
   height: 40px;
@@ -118,7 +118,7 @@ a:hover {
   text-align: center;
 }
 .social-flare a:hover {
-  background: #323232;
+  background: #3c3c3c;
 }
 /* Article styling */
 .site-content {
@@ -136,21 +136,22 @@ a:hover {
   border-bottom: 2px solid #eee;
 }
 .entry-meta {
-  color: #585858;
+  color: #aeaeae;
   margin-top: 12px;
   margin-bottom: 12px;
   font-size: 14px;
+  text-transform: uppercase;
 }
 .entry-meta a,
 .entry-meta a:visited,
 .entry-meta a:focus,
 .entry-meta a:active {
   text-decoration: none;
-  color: #585858;
+  color: #aeaeae;
 }
 .entry-meta a:hover {
   text-decoration: underline;
-  color: #3e3e3e;
+  color: #7b7b7b;
 }
 tt,
 var {
@@ -184,6 +185,13 @@ big {
   margin: 18px auto;
   clear: both;
   display: block;
+}
+.more-tag {
+  margin-top: 24px;
+}
+.more-tag a {
+  text-transform: uppercase;
+  color: #7b7b7b;
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -239,7 +247,7 @@ big {
 /* =Content
 ----------------------------------------------- */
 .sticky .fa-star {
-  color: #181818;
+  color: #222222;
 }
 .hentry {
   margin: 0 0 1.5em;
@@ -290,6 +298,10 @@ big {
 img {
   max-width: 100%;
   height: auto;
+}
+.pager {
+  font-size: 16px;
+  margin-bottom: 48px;
 }
 /* =Asides
 ----------------------------------------------- */
@@ -388,21 +400,20 @@ object {
   left: -48px;
   top: 0;
 }
-.comment-metadata,
-.comment-notes {
+.comment-metadata {
   clear: both;
   font-size: 12px;
-  color: #b1b1b1;
+  color: #bbbbbb;
 }
 .comment-metadata a {
-  color: #b1b1b1;
+  color: #bbbbbb;
   text-decoration: none;
   margin-right: 12px;
 }
 .comment-list .comment-body p {
   margin-top: 12px;
   margin-bottom: 12px;
-  color: #323232;
+  color: #3c3c3c;
   clear: both;
 }
 ol.comment-list {
@@ -422,7 +433,8 @@ ol.comment-list {
   padding-top: 48px;
   padding-bottom: 48px;
 }
-.comments-area .form-allowed-tags {
+.comments-area .form-allowed-tags,
+.comment-notes {
   display: none;
 }
 .comments-area label {
@@ -432,15 +444,19 @@ ol.comment-list {
   text-transform: uppercase;
 }
 #commentform {
-  background: #f1f1f1;
+  border: #959595 1px solid;
   padding: 24px;
   margin-bottom: 24px;
+}
+#commentform label {
+  text-transform: uppercase;
+  color: #2f2f2f;
 }
 #commentform input[type="text"],
 #commentform input[type="email"],
 #commentform textarea {
-  border: 2px solid #ddd;
-  color: #777;
+  border: 1px solid #959595;
+  color: #626262;
   display: block;
   width: 100%;
   outline: none;
@@ -452,7 +468,8 @@ ol.comment-list {
 /* =Widgets
 ----------------------------------------------- */
 #secondary {
-  background: #252525;
+  background: #2f2f2f;
+  background-image: url('images/patterns/ObliqueLine-10x10px.png');
   padding: 24px;
 }
 #secondary .container {
@@ -462,6 +479,7 @@ ol.comment-list {
 }
 .widget {
   margin: 0 0 1.5em;
+  font-weight: 300;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -474,15 +492,16 @@ ol.comment-list {
 .widget ul li {
   margin-bottom: 12px;
   padding-bottom: 12px;
-  color: #989898;
+  color: #a2a2a2;
 }
 .widget ul li a {
-  color: #989898;
+  color: #a2a2a2;
 }
 .widget-title {
   text-transform: uppercase;
   margin-bottom: 24px;
-  color: #000000;
+  color: #888888;
+  font-weight: 400;
 }
 .widget-title a {
   color: inherit;
@@ -498,12 +517,12 @@ ol.comment-list {
   padding: 4rem 0;
   font-size: 1.3rem;
   line-height: 1.7em;
-  color: #7e7e7e;
+  color: #888888;
   text-align: center;
-  background: #181818;
+  background: #222222;
 }
 .site-footer a {
-  color: #7e7e7e;
+  color: #888888;
   text-decoration: none;
 }
 a.back-to-top {
@@ -516,10 +535,10 @@ a.back-to-top {
   text-align: center;
   line-height: 2.6rem;
   border-radius: 50px;
-  background: #fff;
+  background: #222222;
   transition: box-shadow 0.5s;
   text-decoration: none;
-  color: #181818;
+  color: #fff;
 }
 .widget-area {
   clear: both;
@@ -531,7 +550,7 @@ a.back-to-top {
   padding-bottom: 48px;
 }
 .post-navigation a {
-  color: #252525;
+  color: #2f2f2f;
   font-size: 18px;
 }
 .post-navigation .nav-links {
@@ -553,13 +572,13 @@ a.back-to-top {
   position: relative;
 }
 .nav-container {
-  background-color: #181818;
+  background-color: #222222;
   z-index: 99;
   position: relative;
 }
 .nav-toggle {
   display: none;
-  background: #181818;
+  background: #222222;
   cursor: pointer;
   float: right;
   height: 50px;
@@ -581,7 +600,7 @@ a.back-to-top {
 .nav ul {
   list-style-type: none;
   padding-left: 0;
-  background: #181818;
+  background: #222222;
 }
 .nav li > a:hover {
   text-decoration: none;
@@ -629,7 +648,7 @@ a.back-to-top {
 }
 .search-expand {
   display: none;
-  background: #181818;
+  background: #222222;
   position: absolute;
   top: 100%;
   right: 0;

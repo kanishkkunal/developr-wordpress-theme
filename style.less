@@ -25,7 +25,8 @@ and Blueprint http://www.blueprintcss.org/
 /* =Global
 ----------------------------------------------- */
 
-@background-color: #181818;
+@background-color: #222;
+@link-color: #e74c3c;
 @content-background: #fff;
 @padding: 24px;
 @content-width: 700px;
@@ -64,10 +65,10 @@ h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus {
 
 a,
 .link {
-  color: @background-color;
+  color: @link-color;
 }
 a:hover {
-  color: darken(@background-color, 10%);
+  color: darken(@link-color, 10%);
 }
 
 
@@ -152,10 +153,11 @@ background: lighten(@background-color, 10%);
 }
 
 .entry-meta {
-    color: lighten(@background-color, 25%);
+    color: lighten(@background-color, 55%);
     margin-top: @padding / 2;
     margin-bottom: @padding / 2;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .entry-meta a,
@@ -163,12 +165,12 @@ background: lighten(@background-color, 10%);
 .entry-meta a:focus,
 .entry-meta a:active {
     text-decoration: none;
-    color: lighten(@background-color, 25%);
+    color: lighten(@background-color, 55%);
 }
 
 .entry-meta a:hover {
     text-decoration: underline;
-    color: lighten(@background-color, 15%);
+    color: lighten(@background-color, 35%);
 }
 
 tt, var {
@@ -196,6 +198,15 @@ big {
 margin: 18px auto;
 clear: both;
 display: block;
+}
+
+.more-tag {
+    margin-top: @padding;
+}
+
+.more-tag a {
+    text-transform: uppercase;
+    color: lighten(@background-color, 35%);
 }
 
 /* Text meant only for screen readers */
@@ -288,6 +299,11 @@ display: block;
 img {
     max-width: 100%;
     height: auto;
+}
+
+.pager {
+    font-size: 16px;
+    margin-bottom: 2 * @padding;
 }
 
 /* =Asides
@@ -410,7 +426,7 @@ left: -48px;
 top: 0;
 }
 
-.comment-metadata, .comment-notes {
+.comment-metadata {
     clear: both;
     font-size: 12px;    
     color: lighten(@background-color, 60%);
@@ -453,7 +469,7 @@ ol.comment-list {
     padding-bottom: 2 * @padding;
 }
 
-.comments-area .form-allowed-tags {
+.comments-area .form-allowed-tags, .comment-notes {
     display: none;
 }
 
@@ -466,14 +482,19 @@ ol.comment-list {
 }
 
 #commentform {
-background: lighten(@background-color, 85%);
+border: lighten(@background-color, 45%) 1px solid;
 padding: @padding;
 margin-bottom: @padding;
 }
 
+#commentform label {
+    text-transform: uppercase;
+    color: lighten(@background-color, 5%);
+}
+
 #commentform input[type="text"], #commentform input[type="email"], #commentform textarea {
-border: 2px solid #ddd;
-color: #777;
+border: 1px solid lighten(@background-color, 45%);;
+color: lighten(@background-color, 25%);
 display: block;
 width: 100%;
 outline: none;
@@ -489,6 +510,7 @@ height: 120px;
 
 #secondary {
     background: lighten(@background-color, 5%);
+    background-image: @bg-image;
     padding: @padding;
 }
 
@@ -498,6 +520,7 @@ height: 120px;
 
 .widget {
 	margin: 0 0 1.5em;
+    font-weight: 300;
 }
 
 /* Make sure select elements fit in widgets */
@@ -523,7 +546,8 @@ height: 120px;
 .widget-title {
     text-transform: uppercase;
     margin-bottom: @padding;
-    color: darken(@background-color, 20%);
+    color: lighten(@background-color, 40%);
+    font-weight: 400;
 }
 
 .widget-title a {
@@ -562,10 +586,10 @@ margin-left: -15px;
 text-align: center;
 line-height: 2.6rem;
 border-radius: 50px;
-background: #fff;
+background:  @background-color;
 transition: box-shadow 0.5s;
 text-decoration: none;
-color: @background-color;
+color: #fff;
 }
 
 .widget-area {
