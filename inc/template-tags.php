@@ -62,8 +62,8 @@ function developr_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'developr' ); ?></h1>
 		<div class="nav-links row">
 			<?php
-				previous_post_link( '<div class="nav-previous col-sm-6">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'developr' ) );
-				next_post_link(     '<div class="nav-next col-sm-6">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'developr' ) );
+				previous_post_link( '<div class="col-sm-6"><div class="nav-previous">%link</div></div>', _x( '<span class="meta-nav"><i class="fa fa-chevron-left"></i><strong>'.__('Previous', 'developr').'</strong> </span> %title', 'Previous post link', 'developr' ) );
+				next_post_link(     '<div class="col-sm-6"><div class="nav-next">%link</div></div>',     _x( '<strong>'.__('Next', 'developr').'</strong> %title <span class="meta-nav"><i class="fa fa-chevron-right"></i></span>', 'Next post link',     'developr' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

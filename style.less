@@ -626,27 +626,64 @@ color: #fff;
 
 /* Post navs */
 .post-navigation {
-    border-bottom: #eee 2px solid;
-    padding-bottom: 2 * @padding;
+    border-top: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 40px;
 }
 
 .post-navigation a {
-    color: lighten(@background-color, 5%);
-    font-size: 18px;
+    width: 100%;
+    color: lighten(@background-color, 25%);
+    font-size: 16px;
+    position: relative;
+    min-height: 77px;
+    display: block;
+    padding: 16px 46px 24px;
+    font-weight: 300;
+}
+.post-navigation a:hover {
+    text-decoration: none;
+    color: lighten(@background-color, 10%);
 }
 
-.post-navigation .nav-links {
-    margin: auto;
+.post-navigation .fa {
+    color: lighten(@background-color, 40%);
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
 }
+
+.post-navigation strong {
+display: block;
+font-size: 13px;
+color: #bbb;
+letter-spacing: 0.5px;
+font-weight: normal;
+text-transform: uppercase;
+}
+
 
 .post-navigation .nav-previous {
-    padding: @padding;
-    text-align: left;
+    width: 100%;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+.post-navigation .nav-previous .fa {
+    left:  10px;
 }
 
 .post-navigation .nav-next {
-    padding: @padding;
-    text-align: right;
+    width: 100%;
+    float: right;
+    display: inline;
+    text-align: center;
+}
+
+.post-navigation .nav-next .fa {
+    right:  10px;
 }
 
 /*  common : nav

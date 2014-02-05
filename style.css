@@ -571,23 +571,56 @@ a.back-to-top {
 }
 /* Post navs */
 .post-navigation {
-  border-bottom: #eee 2px solid;
-  padding-bottom: 48px;
+  border-top: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 40px;
 }
 .post-navigation a {
-  color: #2f2f2f;
-  font-size: 18px;
+  width: 100%;
+  color: #626262;
+  font-size: 16px;
+  position: relative;
+  min-height: 77px;
+  display: block;
+  padding: 16px 46px 24px;
+  font-weight: 300;
 }
-.post-navigation .nav-links {
-  margin: auto;
+.post-navigation a:hover {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+.post-navigation .fa {
+  color: #888888;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+.post-navigation strong {
+  display: block;
+  font-size: 13px;
+  color: #bbb;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .post-navigation .nav-previous {
-  padding: 24px;
-  text-align: left;
+  width: 100%;
+  float: left;
+  display: inline;
+  text-align: center;
+}
+.post-navigation .nav-previous .fa {
+  left: 10px;
 }
 .post-navigation .nav-next {
-  padding: 24px;
-  text-align: right;
+  width: 100%;
+  float: right;
+  display: inline;
+  text-align: center;
+}
+.post-navigation .nav-next .fa {
+  right: 10px;
 }
 /*  common : nav
 /* ------------------------------------ */
