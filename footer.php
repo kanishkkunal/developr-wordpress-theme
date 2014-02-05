@@ -13,11 +13,14 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
         <a class="back-to-top" href="#">&uarr;</a>
         <div class="container">
+            <div id="copyright">
+			    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &copy; <?php echo date( 'Y' ); ?>. <?php _e('All Rights Reserved.','developr'); ?>
+			</div><!--/#copyright-->
 		    <div class="site-info">
 			    <?php do_action( 'developr_credits' ); ?>
-			    <?php printf( __( 'Proudly powered by %s', 'Developr' ), '<a href="http://wordpress.org/" rel="generator"  target="_blank">WordPress</a>' ); ?>
+			    <?php printf( __( 'Proudly powered by %s', 'developr' ), '<a href="http://wordpress.org/" rel="generator"  target="_blank">WordPress</a>' ); ?>
 			    <span class="sep"> | </span>
-			    <?php printf( __( 'Theme: %1$s by %2$s.', 'Developr' ), 'Developr', '<a href="http://kanishkkunal.in" rel="designer" target="_blank">Kanishk</a>' ); ?>
+			    <?php printf( __( 'Theme: %1$s by %2$s.', 'developr' ), 'Developr', '<a href="http://kanishkkunal.in" rel="designer" target="_blank">Kanishk</a>' ); ?>
 		    </div><!-- .site-info -->
         </div>
 	</footer><!-- #colophon -->
