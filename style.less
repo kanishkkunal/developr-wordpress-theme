@@ -55,12 +55,27 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Bootstrap Style overrides */
 
+
+body {
+    font-size: 16px;
+    line-height: 1.685;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 1.6 * @padding;
+    margin-bottom: 0.8 * @padding;
+}
+
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration: none;
 }
 
 h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus {
     text-decoration: none;
+}
+
+p {
+    margin: 0 0 @padding;
 }
 
 a,
@@ -534,8 +549,7 @@ height: 120px;
 }
 
 .widget ul li {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
+    padding-bottom: @padding / 2;
     color: lighten(@background-color, 50%);
 }
 

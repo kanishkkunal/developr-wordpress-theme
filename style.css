@@ -40,6 +40,19 @@ and Blueprint http://www.blueprintcss.org/
   margin-right: auto;
 }
 /* Bootstrap Style overrides */
+body {
+  font-size: 16px;
+  line-height: 1.685;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 38.400000000000006px;
+  margin-bottom: 19.200000000000003px;
+}
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
@@ -55,6 +68,9 @@ h4 a:focus,
 h5 a:focus,
 h6 a:focus {
   text-decoration: none;
+}
+p {
+  margin: 0 0 24px;
 }
 a,
 .link {
@@ -490,7 +506,6 @@ ol.comment-list {
   padding-left: 0;
 }
 .widget ul li {
-  margin-bottom: 12px;
   padding-bottom: 12px;
   color: #a2a2a2;
 }
