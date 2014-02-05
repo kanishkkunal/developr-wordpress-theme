@@ -56,7 +56,7 @@ and Blueprint http://www.blueprintcss.org/
 /* Bootstrap Style overrides */
 
 
-body {
+body, table {
     font-size: 16px;
     line-height: 1.685;
 }
@@ -632,19 +632,30 @@ input[type="submit"]:hover {
     padding-left: 0;
 }
 
+.widget ul ul {
+    padding-top: @padding / 2;
+    list-style-type: circle;
+    padding-left: @padding;
+}
+
 .widget ul li {
-    padding-bottom: @padding / 2;
+    margin-bottom: @padding / 2;
     color: lighten(@background-color, 50%);
 }
 
-.widget ul li a {
-    color: lighten(@background-color, 50%);
+.widget a {
+    color: lighten(@background-color, 60%);
+}
+
+.widget a:hover {
+    color: lighten(@background-color, 70%);
 }
 
 .widget-title {
     text-transform: uppercase;
+    font-size: 18px;
     margin-bottom: @padding;
-    color: lighten(@background-color, 40%);
+    color: lighten(@background-color, 60%);
     font-weight: 400;
 }
 
@@ -656,6 +667,30 @@ input[type="submit"]:hover {
 .widget_search .search-submit {
 	display: none;
 }
+
+/* Tag cloud */
+.tagcloud {
+    line-height: 1.25;
+}
+
+/*  widget : calendar
+/* ------------------------------------ */
+.widget_calendar a { font-weight: 600; color: @link-color; }
+.widget_calendar a:hover { color: #444!important; }
+.widget_calendar #wp-calendar { width: 100%; }
+.widget_calendar caption { background: @link-color; color: #fff; padding: 5px 10px; }
+.widget_calendar caption:before { color: #fff; color: rgba(255,255,255,0.7); font-size: 15px; }
+.widget_calendar thead { background: #e2e2e2; background: rgba(255,255,255,0.1); -webkit-box-shadow: 0 1px 0 #ddd; box-shadow: inset 0 -1px 0 #ddd; }
+.widget_calendar th { font-weight: 600; }
+.widget_calendar th, 
+.widget_calendar td { padding: 3px 0; text-align: center; border: 1px solid #e2e2e2; }
+.widget_calendar .pad { padding: 0!important; }
+
+/*  widget : rss
+/* ------------------------------------ */
+.widget_rss ul li span.rss-date { color: #777; font-weight: 600; display: block; text-transform: uppercase; font-size: 12px; }
+.widget_rss ul li cite { color: #999; }
+.widget_rss .widget-title img { display: none; }
 
 /* Footer */
 .site-footer {
@@ -921,7 +956,7 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
         padding-right: 15px;
     }
 
-    body {
+    body, table {
         font-size: 15px;
     }
 
