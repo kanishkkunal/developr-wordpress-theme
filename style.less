@@ -176,11 +176,20 @@ background: lighten(@background-color, 10%);
 }
 
 .entry-meta {
-    color: lighten(@background-color, 55%);
+    color: #bbb;
     margin-top: -0.5 * @padding;
     margin-bottom: @padding / 2;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+.entry-meta span {
+    margin-right: 6px;
+}
+
+.entry-meta .posted-on, .entry-meta .label {
+    margin-left: 2px;
+    margin-right: 0px;
 }
 
 footer.entry-meta {
@@ -517,7 +526,6 @@ ol.comment-list {
 
 .comments-area {
     padding: 0px;
-    padding-top:  2 * @padding;
     padding-bottom: 2 * @padding;
 }
 

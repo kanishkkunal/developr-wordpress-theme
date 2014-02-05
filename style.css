@@ -158,11 +158,19 @@ a:hover {
   border-bottom: 2px solid #eee;
 }
 .entry-meta {
-  color: #aeaeae;
+  color: #bbb;
   margin-top: -12px;
   margin-bottom: 12px;
   font-size: 14px;
   text-transform: uppercase;
+}
+.entry-meta span {
+  margin-right: 6px;
+}
+.entry-meta .posted-on,
+.entry-meta .label {
+  margin-left: 2px;
+  margin-right: 0px;
 }
 footer.entry-meta {
   margin-top: 24px;
@@ -477,7 +485,6 @@ ol.comment-list {
 }
 .comments-area {
   padding: 0px;
-  padding-top: 48px;
   padding-bottom: 48px;
 }
 .comments-area .form-allowed-tags,
