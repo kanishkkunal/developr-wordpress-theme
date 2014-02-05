@@ -783,7 +783,7 @@ a.back-to-top {
 .infinity-end.neverending .site-footer {
   display: block;
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 768px) {
   .nav-wrap {
     height: auto!important;
   }
@@ -902,7 +902,7 @@ a.back-to-top {
     -webkit-box-shadow: none;
   }
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 767px) {
   .nav {
     font-weight: normal;
   }
@@ -1012,5 +1012,11 @@ a.back-to-top {
   .container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  body {
+    font-size: 15px;
+  }
+  .site-description {
+    font-size: 18px;
   }
 }
