@@ -152,8 +152,7 @@ a:hover {
   position: relative;
   margin-top: 48px;
 }
-.site-main article.post,
-.site-main article.page {
+.blogroll {
   margin-bottom: 48px;
   padding-bottom: 48px;
   border-bottom: 2px solid #eee;
