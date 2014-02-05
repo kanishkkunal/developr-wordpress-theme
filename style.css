@@ -656,6 +656,11 @@ a.back-to-top {
   padding-bottom: 0;
   position: relative;
 }
+.nav-container {
+  background-color: #222222;
+  z-index: 99;
+  position: relative;
+}
 .nav-toggle {
   display: none;
   background: #222222;
