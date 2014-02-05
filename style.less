@@ -178,10 +178,14 @@ background: lighten(@background-color, 10%);
 
 .entry-meta {
     color: lighten(@background-color, 55%);
-    margin-top: @padding / 2;
+    margin-top: -0.5 * @padding;
     margin-bottom: @padding / 2;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+footer.entry-meta {
+    margin-top: @padding;
 }
 
 .entry-meta a,

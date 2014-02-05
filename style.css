@@ -160,10 +160,13 @@ a:hover {
 }
 .entry-meta {
   color: #aeaeae;
-  margin-top: 12px;
+  margin-top: -12px;
   margin-bottom: 12px;
   font-size: 14px;
   text-transform: uppercase;
+}
+footer.entry-meta {
+  margin-top: 24px;
 }
 .entry-meta a,
 .entry-meta a:visited,

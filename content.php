@@ -11,15 +11,7 @@
     <?php if ( 'post' == get_post_type() ) : ?>
         <div class="entry-meta">
 		    
-            <?php
-			    /* translators: used between list items, there is a space after the comma */
-			    $categories_list = get_the_category_list( __( ', ', 'developr' ) );
-			    if ( $categories_list && developr_categorized_blog() ) :
-		    ?>
-		    <span class="cat-links">
-			    <?php printf( __( '%1$s', 'developr' ), $categories_list ); ?>
-		    </span>
-		    <?php endif; // End if categories ?>
+            <?php the_category(', '); ?>
 
             <a href="<?php the_permalink(); ?>"><?php developr_posted_on(); ?></a>
 	    </div><!-- .entry-meta -->
