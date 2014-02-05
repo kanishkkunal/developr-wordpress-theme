@@ -30,12 +30,12 @@ and Blueprint http://www.blueprintcss.org/
   margin: 0;
 }
 .maxed-width {
-  max-width: 700px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 .maxed-width2 {
-  max-width: 979.9999999999999px;
+  max-width: 1007.9999999999999px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -74,13 +74,13 @@ p {
 }
 a,
 .link {
-  color: #e74c3c;
+  color: #e2842c;
 }
 a:hover {
-  color: #d62c1a;
+  color: #e89e59;
 }
 .container {
-  max-width: 700px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -489,7 +489,7 @@ ol.comment-list {
   padding: 24px;
 }
 #secondary .container {
-  max-width: 979.9999999999999px;
+  max-width: 1007.9999999999999px;
   margin-left: auto;
   margin-right: auto;
 }
