@@ -2,15 +2,28 @@
 /**
  * Developr functions and definitions
  *
+ * Use a child theme instead of placing custom functions here
+ * http://codex.wordpress.org/Child_Themes
  * @package Developr
  */
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 720; /* pixels */
 }
+
+
+/* ------------------------------------------------------------------------- *
+ *  OptionTree framework integration: Use in theme mode
+/* ------------------------------------------------------------------------- */
+	
+add_filter( 'ot_show_pages', '__return_false' );
+add_filter( 'ot_show_new_layout', '__return_false' );
+add_filter( 'ot_theme_mode', '__return_true' );
+load_template( get_template_directory() . '/option-tree/ot-loader.php' );
 
 if ( ! function_exists( 'developr_setup' ) ) :
 /**
@@ -29,6 +42,9 @@ function developr_setup() {
 	 * to change 'developr' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'developr', get_template_directory() . '/languages' );
+
+    // Load theme options
+    load_template( get_template_directory() . '/inc/theme-options.php' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -131,6 +147,38 @@ function developr_excerpt_more($more) {
 	return ' &#8230;';
 }
 endif;
+
+/*  Social links
+/* ------------------------------------ */
+if ( ! function_exists( 'developr_social_links' ) ) {
+
+	function developr_social_links() {
+		if ( !ot_get_option('social-links') =='' ) {
+			$links = ot_get_option('social-links', array());
+			if ( !empty( $links ) ) {	
+				foreach( $links as $item ) {
+					
+					// Build each separate html-section only if set
+					if ( isset($item['title']) && !empty($item['title']) ) 
+						{ $title = 'title="' .$item['title']. '"'; } else $title = '';
+					if ( isset($item['social-link']) && !empty($item['social-link']) ) 
+						{ $link = 'href="' .$item['social-link']. '"'; } else $link = '';
+					if ( isset($item['social-target']) && !empty($item['social-target']) ) 
+						{ $target = 'target="_blank"'; } else $target = '';
+					if ( isset($item['social-icon']) && !empty($item['social-icon']) ) 
+						{ $icon = 'class="fa ' .$item['social-icon']. '"'; } else $icon = '';
+					if ( isset($item['social-color']) && !empty($item['social-color']) ) 
+						{ $color = 'style="color: ' .$item['social-color']. ';"'; } else $color = '';
+					
+					// Put them together
+					if ( isset($item['title']) && !empty($item['title']) && isset($item['social-icon']) && !empty($item['social-icon']) && ($item['social-icon'] !='fa-') ) {
+						echo '<a rel="nofollow" class="social-links" '.$title.' '.$link.' '.$target.'><i '.$icon.' '.$color.'></i></a>'."\n";
+					}
+				}
+			}
+		}
+	}
+}
 
 add_filter( 'excerpt_more', 'developr_excerpt_more' );
 
