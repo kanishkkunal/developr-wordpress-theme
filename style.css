@@ -495,29 +495,49 @@ ol.comment-list {
   display: block;
 }
 #reply-title {
+  font-size: 19px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 #commentform {
-  border: #959595 1px solid;
-  padding: 24px;
+  border: #c8c8c8 1px solid;
+  padding: 24px 24px 12px 24px;
   margin-bottom: 24px;
 }
 #commentform label {
   text-transform: uppercase;
   color: #2f2f2f;
 }
-#commentform input[type="text"],
-#commentform input[type="email"],
 #commentform textarea {
-  border: 1px solid #959595;
+  height: 120px;
+}
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #c8c8c8;
   color: #626262;
   display: block;
   width: 100%;
   outline: none;
   padding: 7px 8px;
 }
-#commentform textarea {
-  height: 120px;
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid #e67e22;
+}
+input[type="submit"] {
+  background: #e67e22;
+  color: #fff;
+  padding: 8px 14px;
+  font-weight: 600;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: #d67118;
 }
 /* =Widgets
 ----------------------------------------------- */

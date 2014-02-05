@@ -538,12 +538,14 @@ ol.comment-list {
 }
 
 #reply-title {
+    font-size: 19px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 #commentform {
-border: lighten(@background-color, 45%) 1px solid;
-padding: @padding;
+border: lighten(@background-color, 65%) 1px solid;
+padding: @padding @padding @padding / 2 @padding;
 margin-bottom: @padding;
 }
 
@@ -552,17 +554,39 @@ margin-bottom: @padding;
     color: lighten(@background-color, 5%);
 }
 
-#commentform input[type="text"], #commentform input[type="email"], #commentform textarea {
-border: 1px solid lighten(@background-color, 45%);;
-color: lighten(@background-color, 25%);
-display: block;
-width: 100%;
-outline: none;
-padding: 7px 8px;
-}
 
 #commentform textarea {
 height: 120px;
+}
+
+/* Input Styling */
+
+input[type="text"], input[type="email"], textarea {
+    border: 1px solid lighten(@background-color, 65%);
+    color: lighten(@background-color, 25%);
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 7px 8px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border: 1px solid @link-color;
+}
+
+
+input[type="submit"] {
+background: @link-color;
+color: #fff;
+padding: 8px 14px;
+font-weight: 600;
+display: inline-block;
+border: none;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: darken(@link-color, 5%);
 }
 
 /* =Widgets
