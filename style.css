@@ -376,6 +376,29 @@ iframe,
 object {
   max-width: 100%;
 }
+/* Jetpack share buttons styling */
+div.sharedaddy div.sd-block {
+  border: none !important;
+  padding-top: 24px !important;
+}
+div.sharedaddy h3 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  color: #bbb;
+  width: auto !important;
+  margin: 6px 12px 12px 0 !important;
+}
+div.sharedaddy .sd-content {
+  float: left !important;
+  width: auto !important;
+}
+div.sharedaddy a.sd-button {
+  font-size: 14px !important;
+  padding: 3px 5px !important;
+  border-radius: 0 !important;
+}
 /* =Comments
 ----------------------------------------------- */
 .comment-list,
