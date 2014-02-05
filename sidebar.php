@@ -6,7 +6,9 @@
  */
 ?>
 </div><!-- #content -->
-
+    <div id="above-footer" class="widget-area">
+        <?php dynamic_sidebar( 'above-footer' ) ?>
+    </div>
 	<div id="secondary" class="widget-area" role="complementary">
         <div class="container">
 		    <?php do_action( 'before_sidebar' ); ?>

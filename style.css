@@ -198,7 +198,6 @@ acronym {
   cursor: help;
 }
 ins {
-  background: #fff9c0;
   text-decoration: none;
 }
 big {
@@ -560,6 +559,11 @@ input[type="submit"]:hover {
 }
 /* =Widgets
 ----------------------------------------------- */
+#above-footer {
+  max-width: 1007.9999999999999px;
+  margin-left: auto;
+  margin-right: auto;
+}
 #secondary {
   background: #2f2f2f;
   color: #a2a2a2;

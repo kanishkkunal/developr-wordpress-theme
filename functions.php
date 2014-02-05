@@ -62,6 +62,15 @@ add_action( 'after_setup_theme', 'developr_setup' );
  * Register widgetized area and update sidebar with default widgets.
  */
 function developr_widgets_init() {
+    register_sidebar( array(
+		'name'          => __( 'Full-width Footer for ads etc.', 'developr' ),
+		'id'            => 'above-footer',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+
 	register_sidebar( array(
 		'name'          => __( 'Footer-1', 'developr' ),
 		'id'            => 'footer-1',
