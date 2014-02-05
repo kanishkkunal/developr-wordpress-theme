@@ -26,7 +26,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------- */
 
 @background-color: #222;
-@link-color: #e2842c;
+@link-color: #e67e22;
 @content-background: #fff;
 @padding: 24px;
 @content-width: 720px;
@@ -103,14 +103,23 @@ a:hover {
     background-image: @bg-image;
     color: lighten(@background-color, 55%);
     position: relative;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 1.5 * @padding 0 2 * @padding;
     margin-bottom: 0;
+}
+
+.site-title, .site-description {
+    margin-top: @padding / 2;
+    margin-bottom: @padding / 2;
+}
+
+.site-description {
+    font-size: 28px;
 }
 
 .site-title a {
     color: lighten(@background-color, 85%);
 }
+
 
 .social-flare-container {
 bottom: -20px;
@@ -645,11 +654,12 @@ color: #fff;
 }
 
 #topbar {
+    background-color: @background-color;
     padding-top: 0; padding-bottom: 0;
     position: relative;
 }
 
-.nav-container { background-color: @background-color; z-index: 99; position: relative; }
+.nav-container { }
 .nav-toggle { display: none; background: @background-color; cursor: pointer; float: right; height: 50px; width: 60px; color: #fff; text-align: center; }
 .nav-toggle i { font-size: 29px; padding: 10px 0; }
 .nav-text { display: none; float: right; font-size: 16px; line-height: 24px; padding: 13px 20px; }

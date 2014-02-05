@@ -74,10 +74,10 @@ p {
 }
 a,
 .link {
-  color: #e2842c;
+  color: #e67e22;
 }
 a:hover {
-  color: #e89e59;
+  color: #eb9950;
 }
 .container {
   max-width: 720px;
@@ -96,9 +96,16 @@ a:hover {
   background-image: url('images/patterns/ObliqueLine-10x10px.png');
   color: #aeaeae;
   position: relative;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 36px 0 48px;
   margin-bottom: 0;
+}
+.site-title,
+.site-description {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.site-description {
+  font-size: 28px;
 }
 .site-title a {
   color: #fbfbfb;
@@ -586,13 +593,9 @@ a.back-to-top {
   padding-bottom: 48px;
 }
 #topbar {
+  background-color: #222222;
   padding-top: 0;
   padding-bottom: 0;
-  position: relative;
-}
-.nav-container {
-  background-color: #222222;
-  z-index: 99;
   position: relative;
 }
 .nav-toggle {
