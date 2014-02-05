@@ -14,7 +14,7 @@
         <a class="back-to-top" href="#">&uarr;</a>
         <div class="container">
             <div id="copyright">
-			    <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &copy; <?php echo date( 'Y' ); ?>. <?php _e('All Rights Reserved.','developr'); ?>
+			    <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &copy; <?php echo date( 'Y' ); ?>. <?php _e('All Rights Reserved.','developr'); ?>
 			</div><!--/#copyright-->
 		    <div class="site-info">
 			    <?php do_action( 'developr_credits' ); ?>
