@@ -77,7 +77,8 @@ a,
 .link {
   color: #e67e22;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #eb9950;
 }
 .container {
@@ -968,6 +969,10 @@ a.back-to-top {
   }
   #nav-topbar .nav > li > a:hover,
   #nav-topbar .nav > li:hover > a {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #nav-topbar .nav > li > a:focus,
+  #nav-topbar .nav > li:focus > a {
     background-color: rgba(0, 0, 0, 0.1);
   }
   #nav-topbar .nav li > a:hover,

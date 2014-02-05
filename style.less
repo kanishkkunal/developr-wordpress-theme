@@ -82,7 +82,7 @@ a,
 .link {
   color: @link-color;
 }
-a:hover {
+a:hover, a:focus {
   color: lighten(@link-color, 10%);
 }
 
@@ -896,6 +896,8 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 	#nav-topbar .nav > li { border-right: none; }
 	#nav-topbar .nav > li > a:hover, 
 	#nav-topbar .nav > li:hover > a { background-color: rgba(0,0,0,0.1); }
+    #nav-topbar .nav > li > a:focus, 
+	#nav-topbar .nav > li:focus > a { background-color: rgba(0,0,0,0.1); }
 	#nav-topbar .nav li > a:hover, 
 	#nav-topbar .nav li:hover > a, 
 	#nav-topbar .nav li.current_page_item > a, 
