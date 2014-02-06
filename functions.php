@@ -150,6 +150,42 @@ function developr_excerpt_more($more) {
 	return ' &#8230;';
 }
 endif;
+add_filter( 'excerpt_more', 'developr_excerpt_more' );
+
+/*  Excerpt length
+/* ------------------------------------ */
+if ( ! function_exists( 'developr_excerpt_length' ) ) {
+
+	function developr_excerpt_length( $length ) {
+		return ot_get_option('excerpt-length',$length);
+	}
+	
+}
+add_filter( 'excerpt_length', 'developr_excerpt_length', 999 );
+
+/* Gravatar Image */
+
+/*  Social links
+/* ------------------------------------ */
+if ( ! function_exists( 'developr_admin_gravatar' ) ) {
+    function developr_admin_gravatar() {
+        // Get default from Discussion Settings.
+	    $default = get_option( 'avatar_default', 'mystery' ); // Mystery man default
+	    if ( 'mystery' == $default )
+		    $default = 'mm';
+	    elseif ( 'gravatar_default' == $default )
+		    $default = '';
+
+	    $protocol = ( is_ssl() ) ? 'https://secure.' : 'http://';
+	    $url = sprintf( '%1$sgravatar.com/avatar/%2$s/', $protocol, md5( get_option( 'admin_email' ) ) );
+	    $url = add_query_arg( array(
+		    's' => 120,
+		    'd' => urlencode( $default ),
+	    ), $url );
+
+	   return esc_url_raw( $url );
+    }
+}
 
 /*  Social links
 /* ------------------------------------ */
@@ -183,7 +219,7 @@ if ( ! function_exists( 'developr_social_links' ) ) {
 	}
 }
 
-add_filter( 'excerpt_more', 'developr_excerpt_more' );
+
 
 /**
  * Implement the Custom Header feature.

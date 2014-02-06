@@ -84,7 +84,7 @@ function custom_theme_options() {
 		array(
 			'id'		=> 'post-text',
 			'label'		=> 'Content or Excerpt',
-			'desc'		=> 'More link appears at the bottom of both excerpt and content',
+			'desc'		=> 'Select if you want to show full content or just the summary (excerpt) of post in your blogroll.',
 			'std'		=> 'excerpt',
 			'type'		=> 'radio',
 			'section'	=> 'blog',
@@ -103,7 +103,7 @@ function custom_theme_options() {
 		array(
 			'id'			=> 'excerpt-length',
 			'label'			=> 'Excerpt Length',
-			'desc'			=> 'Max number of words',
+			'desc'			=> 'Max number of words to show in Excerpt',
 			'std'			=> '34',
 			'type'			=> 'numeric-slider',
 			'section'		=> 'blog',
@@ -132,15 +132,29 @@ function custom_theme_options() {
 		array(
 			'id'		=> 'custom-image',
 			'label'		=> 'Custom Image',
-			'desc'		=> 'Upload your custom Profile Image. Its highly recommended that you set your gravatar instead of setting this option.',
+			'desc'		=> 'Recommened size is 120px by 120px. You can set your gravatar profile image by going to Gravatar.com, instead of setting this option.',
 			'type'		=> 'upload',
 			'section'	=> 'header'
+		),
+        // Header: Clip Image
+		array(
+			'id'		=> 'clip-image',
+			'label'		=> 'Clip Image',
+			'desc'		=> 'By default a circular clip is applied to the header image. You can disable it by selecting this option.',
+			'type'		=> 'checkbox',
+			'section'	=> 'header',
+            'choices'	=> array(
+				array( 
+					'value' => '1',
+					'label' => 'Disable Image Clip'
+				)
+			)
 		),
 		// Header: Site Description
 		array(
 			'id'		=> 'site-description',
 			'label'		=> 'Site Description',
-			'desc'		=> 'The description that appears below your site name in header',
+			'desc'		=> 'The description that appears below your site name in header on front page',
 			'type'		=> 'checkbox',
 			'section'	=> 'header',
 			'choices'	=> array(
@@ -162,7 +176,7 @@ function custom_theme_options() {
 		array(
 			'id'		=> 'credit',
 			'label'		=> 'Footer Credit',
-			'desc'		=> 'Disable footer credit text',
+			'desc'		=> 'It is ok to disable the footer credit text if you don\'t like it. I would be grateful if you let others know about this theme by tweeting or blogging about it.',
 			'std'		=> '',
 			'type'		=> 'checkbox',
 			'section'	=> 'footer',

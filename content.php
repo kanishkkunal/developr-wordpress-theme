@@ -25,11 +25,24 @@
 	    </div><!--/.post-thumbnail-->
 	<?php endif; ?>
 		
+	 <?php 
+		if ( ot_get_option('post-text') == 'content' ) {
+    ?>
+            <div class="entry">
+               <?php the_content(); ?>
+	        </div>
+    <?php
+        } 
+		else {
+    ?>
+            <div class="entry-summary">
+               <?php the_excerpt(); ?>
+	        </div><!-- .entry-summary -->
+            <div class="more-tag">
+                <a class="" href="<?php the_permalink(); ?>" ><?php echo __( 'Read More', 'developr' ) ?> &rarr;</a>
+            </div>
+    <?php
+		}
+	?>
 	
-	<div class="entry-summary">
-        <?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-    <div class="more-tag">
-        <a class="" href="<?php the_permalink(); ?>" ><?php echo __( 'Read More', 'developr' ) ?> &rarr;</a>
-    </div>
 </article><!-- #post-## -->

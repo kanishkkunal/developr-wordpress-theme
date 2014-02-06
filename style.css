@@ -569,7 +569,7 @@ input[type="submit"]:hover {
   background: #2f2f2f;
   color: #a2a2a2;
   background-image: url('images/patterns/ObliqueLine-10x10px.png');
-  padding: 24px;
+  padding: 24px 0;
 }
 #secondary .container {
   max-width: 1007.9999999999999px;
