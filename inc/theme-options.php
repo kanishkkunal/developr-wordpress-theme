@@ -232,7 +232,7 @@ function custom_theme_options() {
 				array(
 					'id'		=> 'social-color',
 					'label'		=> 'Icon Color',
-					'desc'		=> 'Set a unique color for your icon (optional)',
+					'desc'		=> 'Set a unique color for your icon (optional, used in widget only)',
 					'std'		=> '',
 					'type'		=> 'colorpicker',
 					'section'	=> 'styling'

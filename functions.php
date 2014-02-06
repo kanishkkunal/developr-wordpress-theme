@@ -46,6 +46,9 @@ function developr_setup() {
     // Load theme options
     load_template( get_template_directory() . '/inc/theme-options.php' );
 
+    // Load custom widgets
+    load_template( get_template_directory() . '/widgets/developr-social.php' );
+
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -152,7 +155,7 @@ endif;
 /* ------------------------------------ */
 if ( ! function_exists( 'developr_social_links' ) ) {
 
-	function developr_social_links() {
+	function developr_social_links($is_color_supported = FALSE) {
 		if ( !ot_get_option('social-links') =='' ) {
 			$links = ot_get_option('social-links', array());
 			if ( !empty( $links ) ) {	
@@ -167,12 +170,12 @@ if ( ! function_exists( 'developr_social_links' ) ) {
 						{ $target = 'target="_blank"'; } else $target = '';
 					if ( isset($item['social-icon']) && !empty($item['social-icon']) ) 
 						{ $icon = 'class="fa ' .$item['social-icon']. '"'; } else $icon = '';
-					if ( isset($item['social-color']) && !empty($item['social-color']) ) 
-						{ $color = 'style="color: ' .$item['social-color']. ';"'; } else $color = '';
+					if ( isset($item['social-color']) && !empty($item['social-color']) && $is_color_supported ) 
+						{ $color = 'style="background: ' .$item['social-color']. ';"'; } else $color = '';
 					
 					// Put them together
 					if ( isset($item['title']) && !empty($item['title']) && isset($item['social-icon']) && !empty($item['social-icon']) && ($item['social-icon'] !='fa-') ) {
-						echo '<a rel="nofollow" class="social-links" '.$title.' '.$link.' '.$target.'><i '.$icon.' '.$color.'></i></a>'."\n";
+						echo '<a rel="nofollow" class="social-links" '.$title.' '.$link.' '.$target.' '.$color.'><i '.$icon.' ></i></a>'."\n";
 					}
 				}
 			}

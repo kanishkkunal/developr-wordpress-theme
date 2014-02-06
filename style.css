@@ -133,7 +133,7 @@ a:focus {
 .social-flare a {
   display: inline-block;
   background: #222222;
-  color: #ffffff;
+  color: #eee;
   font-size: 18px;
   height: 40px;
   width: 40px;
@@ -144,6 +144,7 @@ a:focus {
 }
 .social-flare a:hover {
   background: #3c3c3c;
+  color: #fff;
 }
 /* Article styling */
 .site-content {
@@ -674,6 +675,28 @@ input[type="submit"]:hover {
 }
 .widget_rss .widget-title img {
   display: none;
+}
+/* Scoial Follow Widget */
+.widget_developr_social {
+  font-size: 18px;
+}
+.widget_developr_social a {
+  display: inline-block;
+  position: relative;
+  margin-right: 2px;
+  background: #222222;
+  color: #ffffff !important;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+}
+.widget_developr_social a:hover {
+  background: #272727;
+  color: #fff !important;
+  top: -2px;
 }
 /* ------------------------------------------------------------------------- *
  *  Plugins
