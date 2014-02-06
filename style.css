@@ -576,7 +576,7 @@ input[type="submit"]:hover {
   margin-right: auto;
 }
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 48px;
   font-weight: 300;
 }
 /* Make sure select elements fit in widgets */
