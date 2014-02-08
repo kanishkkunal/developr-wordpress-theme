@@ -1,7 +1,11 @@
-_s
+Developr
 ===
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Developr is a classy WordPress theme built with bootstrap. It’s most suitable for blogs and websites of developers who want to make use of bootstrap css for custom designing their pages and posts. However, it is designed to be used by anyone without learning about bootstrap.
+
+Developr is a responsive theme with the awesomeness of Font Awesome built right into it.
+
+You are free to use this theme as base and design your own themes. This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you’ve learned with others.
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
