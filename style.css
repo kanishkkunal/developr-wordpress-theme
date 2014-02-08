@@ -327,8 +327,10 @@ big {
 }
 .post-thumbnail img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 img {
   max-width: 100%;
@@ -448,7 +450,6 @@ div.sharedaddy a.sd-button {
   padding-left: 60px;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 300;
   margin: 0;
 }
 .comment-list li li {

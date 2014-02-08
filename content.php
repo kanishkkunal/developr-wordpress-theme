@@ -28,9 +28,16 @@
 	 <?php 
 		if ( ot_get_option('post-text') == 'content' ) {
     ?>
-            <div class="entry">
+            <div class="entry-content">
                <?php the_content(); ?>
 	        </div>
+            <footer class="entry-meta">
+			        <?php the_tags('<p class="post-tags"><span>'.__('TAGS:','developr').'</span> <span class="label label-default">','</span> <span class="label label-default">','</span></p>'); ?>
+                <div>
+                    <a href="<?php comments_link(); ?>"><i class="fa fa-comment"></i> <?php comments_number( 'Write a Comment', '1 Comment', '% Comments' ); ?></a>
+                </div>
+	        </footer><!-- .entry-meta -->
+            
     <?php
         } 
 		else {

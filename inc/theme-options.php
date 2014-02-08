@@ -132,7 +132,7 @@ function custom_theme_options() {
 		array(
 			'id'		=> 'custom-image',
 			'label'		=> 'Custom Image',
-			'desc'		=> 'Recommened size is 120px by 120px. You can set your gravatar profile image by going to Gravatar.com, instead of setting this option.',
+			'desc'		=> 'Recommended size is 120px by 120px. You can set your gravatar profile image by going to Gravatar.com, instead of setting this option.',
 			'type'		=> 'upload',
 			'section'	=> 'header'
 		),

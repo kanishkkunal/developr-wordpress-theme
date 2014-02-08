@@ -54,7 +54,7 @@
 		    <?php endif; ?>
 		    <div class="site-branding text-center">
                 
-                 <?php if( is_home() ) : ?>
+                 <?php if( is_home() || is_front_page() ) : ?>
 			        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                     <?php if ( !ot_get_option('site-description') ): ?><h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><?php endif; ?>
                 <?php endif; ?>
