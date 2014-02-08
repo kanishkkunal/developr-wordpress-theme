@@ -104,7 +104,7 @@ function custom_theme_options() {
 			'id'			=> 'excerpt-length',
 			'label'			=> 'Excerpt Length',
 			'desc'			=> 'Max number of words to show in Excerpt',
-			'std'			=> '34',
+			'std'			=> '55',
 			'type'			=> 'numeric-slider',
 			'section'		=> 'blog',
 			'min_max_step'	=> '0,100,1'
@@ -280,32 +280,18 @@ function custom_theme_options() {
 				)
 			)
 		),
-		// General: Boxed Layout
-		array(
-			'id'		=> 'boxed',
-			'label'		=> 'Boxed Layout',
-			'desc'		=> 'Use a boxed layout',
-			'type'		=> 'checkbox',
-			'section'	=> 'styling',
-			'choices'	=> array(
-				array( 
-					'value' => '1',
-					'label' => 'Enable'
-				)
-			)
-		),
 		// Styling: Font
 		array(
 			'id'		=> 'font',
 			'label'		=> 'Font',
-			'desc'		=> 'Select font for the theme',
+			'desc'		=> 'Select font for the theme. Default is Open Sans',
 			'type'		=> 'select',
 			'std'		=> '30',
 			'section'	=> 'styling',
 			'choices'	=> array(
 				array( 
 					'value' => 'lato',
-					'label' => 'Lato, Latin (Self-hosted)'
+					'label' => 'Lato, Latin (Google Fonts)'
 				),
 				array( 
 					'value' => 'titillium-web',
@@ -349,157 +335,13 @@ function custom_theme_options() {
 				)
 			)
 		),
-		// Styling: Container Width
-		array(
-			'id'			=> 'container-width',
-			'label'			=> 'Website Max-width',
-			'desc'			=> 'Max-width of the container. <br /><i>Note: For 680px media, 600px content (default) use <strong>1080px</strong> with sidebar active. If you use no sidebars anywhere, use <strong>740px</strong> (or more).</i>',
-			'std'			=> '1080',
-			'type'			=> 'numeric-slider',
-			'section'		=> 'styling',
-			'min_max_step'	=> '740,1600,1'
-		),
 		// Styling: Primary Color
 		array(
 			'id'		=> 'color-accent',
 			'label'		=> 'Primary Accent Color',
-			'desc'		=> '<i>Default: #e8554e</i>',
-			'std'		=> '#e8554e',
+			'desc'		=> '<i>Default: #e67e22</i>',
+			'std'		=> '#e67e22',
 			'type'		=> 'colorpicker',
-			'section'	=> 'styling'
-		),
-		// Styling: Topbar Background
-		array(
-			'id'		=> 'color-topbar',
-			'label'		=> 'Topbar Background',
-			'desc'		=> '<i>Default: #222222</i>',
-			'std'		=> '#222222',
-			'type'		=> 'colorpicker',
-			'section'	=> 'styling'
-		),
-		// Styling: Header Background
-		array(
-			'id'		=> 'color-header',
-			'label'		=> 'Header Background',
-			'desc'		=> '<i>Default: #f2f2f2</i>',
-			'std'		=> '#f2f2f2',
-			'type'		=> 'colorpicker',
-			'section'	=> 'styling'
-		),
-		// Styling: Header Light Text
-		array(
-			'id'		=> 'light-header-text',
-			'label'		=> 'Header Text Color',
-			'desc'		=> '',
-			'std'		=> '',
-			'type'		=> 'checkbox',
-			'section'	=> 'styling',
-			'choices'	=> array(
-				array( 
-					'value' => '1',
-					'label' => 'Use light header text'
-				)
-			)
-		),
-		// Styling: Footer Background
-		array(
-			'id'		=> 'color-footer',
-			'label'		=> 'Footer Background',
-			'desc'		=> '<i>Default: #222222</i>',
-			'std'		=> '#222222',
-			'type'		=> 'colorpicker',
-			'section'	=> 'styling'
-		),
-		// Styling: Footer Toplink Color
-		array(
-			'id'		=> 'color-footer-toplink',
-			'label'		=> 'Footer Toplink Color',
-			'desc'		=> 'Suggestion - use the same color as your primary accent color<br /><i>Default: #333333</i>',
-			'std'		=> '#333333',
-			'type'		=> 'colorpicker',
-			'section'	=> 'styling'
-		),
-		// Styling: Header Logo Max-height
-		array(
-			'id'			=> 'logo-max-height',
-			'label'			=> 'Header Logo Image Max-height',
-			'desc'			=> 'Your logo image should have the double height of this to be high resolution',
-			'std'			=> '80',
-			'type'			=> 'numeric-slider',
-			'section'		=> 'styling',
-			'min_max_step'	=> '40,200,1'
-		),
-			// Styling: Formats
-			array(
-				'id'		=> 'color-audio',
-				'label'		=> 'Format: Audio',
-				'desc'		=> '<i>Default: #69bac8</i>',
-				'std'		=> '#69bac8',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-chat',
-				'label'		=> 'Format: Chat',
-				'desc'		=> '<i>Default: #69bac8</i>',
-				'std'		=> '#69bac8',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-gallery',
-				'label'		=> 'Format: Gallery',
-				'desc'		=> '<i>Default: #7eb66f</i>',
-				'std'		=> '#7eb66f',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-image',
-				'label'		=> 'Format: Image',
-				'desc'		=> '<i>Default: #7eb66f</i>',
-				'std'		=> '#7eb66f',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-link',
-				'label'		=> 'Format: Link',
-				'desc'		=> '<i>Default: #e8554e</i>',
-				'std'		=> '#e8554e',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-quote',
-				'label'		=> 'Format: Quote',
-				'desc'		=> '<i>Default: #e7ba3a</i>',
-				'std'		=> '#e7ba3a',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-status',
-				'label'		=> 'Format: Status',
-				'desc'		=> '<i>Default: #ffa500</i>',
-				'std'		=> '#ffa500',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),
-			array(
-				'id'		=> 'color-video',
-				'label'		=> 'Format: Video',
-				'desc'		=> '<i>Default: #e8554e</i>',
-				'std'		=> '#e8554e',
-				'type'		=> 'colorpicker',
-				'section'	=> 'styling'
-			),			
-		// Styling: Body Background
-		array(
-			'id'		=> 'body-background',
-			'label'		=> 'Body Background',
-			'desc'		=> 'Set background color and/or upload your own background image',
-			'type'		=> 'background',
 			'section'	=> 'styling'
 		)
 	)
