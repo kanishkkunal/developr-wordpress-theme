@@ -53,6 +53,9 @@ function developr_setup() {
     // Load dynamic styles
 	load_template( get_template_directory() . '/inc/dynamic-styles.php' );
 
+    // Load TGM plugin activation
+    load_template( get_template_directory() . '/inc/class-tgm-plugin-activation.php' );
+
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -222,6 +225,36 @@ if ( ! function_exists( 'developr_social_links' ) ) {
 		}
 	}
 }
+
+
+/*  TGM plugin activation
+/* ------------------------------------ */
+if ( ! function_exists( 'developr_plugins' ) ) {
+
+	function developr_plugins() {
+		
+		// Add the following plugins
+		$plugins = array(
+			array(
+				'name' 				=> 'WP-PageNavi',
+				'slug' 				=> 'wp-pagenavi',
+				'required'			=> false,
+				'force_activation' 	=> false,
+				'force_deactivation'=> false,
+			),
+			array(
+				'name' 				=> 'Responsive Lightbox',
+				'slug' 				=> 'light',
+				'source'			=> get_template_directory() . '/plugins/light.zip',
+				'required'			=> false,
+				'force_activation' 	=> false,
+				'force_deactivation'=> false,
+			)
+		);	
+		tgmpa( $plugins );
+	}
+}
+add_action( 'tgmpa_register', 'developr_plugins' );
 
 
 
