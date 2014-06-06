@@ -160,6 +160,9 @@ a:focus {
   padding-bottom: 48px;
   border-bottom: 2px solid #eee;
 }
+.widget .blogroll {
+  border-bottom: none;
+}
 .entry-meta {
   color: #bbb;
   margin-top: -12px;
