@@ -49,6 +49,8 @@ function developr_setup() {
     // Load custom widgets
     load_template( get_template_directory() . '/widgets/developr-social.php' );
 
+    // Load custom shortcodes
+	load_template( get_template_directory() . '/inc/shortcodes.php' );
 
     // Load dynamic styles
 	load_template( get_template_directory() . '/inc/dynamic-styles.php' );
