@@ -9,7 +9,7 @@
 
         $output_content = "";
 		// put your behance feed in the string http://www.behance.net/YOURFEED.xml
-        $rss = fetch_feed('http://www.behance.net/monikaratan.xml');
+        $rss = fetch_feed('http://www.behance.net/'.$content.'.xml');
 
         if ( is_wp_error( $rss ) ) {
             return "";
@@ -41,7 +41,7 @@
 
         foreach ( $rss_items as $item ) :
 
-        $output_content .= '<div class="col-sm-4 col-xs-12"><div class="thumbnail" style="border:none;">';
+        $output_content .= '<div class="col-sm-4 col-xs-12"><div class="thumbnail" style="border:none;min-height:240px;">';
         $output_content .=        '<a target="_blank" href="'. $item->get_permalink().'" title="'. $item->get_title().'">';
         $output_content .=         "<img src='".GetBetween($item->get_description(), "<img src='", "'")."' alt='".html_entity_decode($item->get_title())."'>";
         $output_content .=         '<div class="caption"><h3 class="h6 text-center">'.html_entity_decode($item->get_title()).'</h3></div>';
